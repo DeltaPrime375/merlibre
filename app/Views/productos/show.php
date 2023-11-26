@@ -85,8 +85,10 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                         <h1 class="display-5 fw-bolder"><?php echo trim($producto['nombre_producto'])?></h1>
                         <div class="fs-5 mb-5">
                             
-                            <span class="text-decoration-line-through">$
-                                <?php echo trim($producto['precio_producto'])?>
+                            <span class="text-decoration-line-through">
+                                <?php if($producto['descuento']>0){
+                                    echo "$",($producto['precio_producto']);
+                                }?>
                             </span>
                             <h1>
                                 $<?php echo round (trim((($producto['precio_producto'])/100)*(100-($producto['descuento']))), 2)?>
