@@ -40,22 +40,20 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                             <input type = "text" class = "form-control" name = "mercancia_transito" placeholder = "Ingrese la cantidad de la mercancia que se encuentra en transito"/>
                                         </div>
                                         <div class = "form-group mb-3">
-                                            
-
                                             <label class = "form-label" for = "nuevo_usado">Nuevo/Usado</label>
                                                 <select name="nuevo_usado" id="nuevo_usado" class = "form-control">
                                                     <option value="Nuevo">Nuevo</option>
                                                     <option value="Usado">Usado</option>
                                                     
                                             </select>
-
-
-                                            <!--<input type = "text" class = "form-control" name = "nuevo_usado" placeholder = "Ingrese si el producto es nuevo o usado"/>
-                                            -->
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Descripcion</label>
                                             <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "Ingrese una descripcion a detalle del producto"/>
+                                        </div>
+                                        <div class = "form-group mb-3">
+                                            <label class = "form-label">Imagen</label>
+                                            <input type = "text" class = "form-control" name = "imagen" placeholder = "Ingrese el enlace web de la imagen"/>
                                         </div>
                                         <button type = "submit" class = "btn btn-success">Guardar Producto</button>
                                     </div>

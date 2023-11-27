@@ -46,7 +46,9 @@ class ProductController extends BaseController
             'existencia' => $this->request->getVar('existencia'),
             'mercancia_transito' => $this->request->getVar('mercancia_transito'),
             'nuevo_usado' => $this->request->getVar('nuevo_usado'), 
-            'descripcion_general' => $this->request->getVar('descripcion_general')
+            'descripcion_general' => $this->request->getVar('descripcion_general'),
+            'imagen' => $this->request->getVar('imagen')
+
         ]);
 
         session()->setFlashdata('success', 'Se agrego un nuevo producto');
@@ -77,7 +79,8 @@ class ProductController extends BaseController
             'existencia' => $this->request->getVar('existencia'),
             'mercancia_transito' => $this->request->getVar('mercancia_transito'),
             'nuevo_usado' => $this->request->getVar('nuevo_usado'), 
-            'descripcion_general' => $this->request->getVar('descripcion_general')
+            'descripcion_general' => $this->request->getVar('descripcion_general'),
+            'imagen' => $this->request->getVar('imagen')
         ]);
 
         session()->setFlashdata('success', 'Se actualizaron los valores del producto');

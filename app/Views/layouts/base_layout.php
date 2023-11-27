@@ -3,7 +3,7 @@
 <style {csp-style-nonce}>
 .header {
   overflow: hidden;
-  background-color: #FFF24F;
+  background-color: #FFF159;
   padding: 20px 10px;
 }
 .header a {
