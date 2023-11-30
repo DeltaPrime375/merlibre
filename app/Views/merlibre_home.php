@@ -29,14 +29,14 @@
 
       <div class="grid-item">
 
-            <figure class="image is-4by3">
+            <figure class="img_card">
               <img width="150" height= "50%" src=<?php echo trim($producto['imagen']) ?> alt="..." />
             </figure>
 
-                <p class="title is-4">
+                <p class="price_card">
                   <?= "$",$producto['precio_producto'] ?>
                 </p>
-                <p class="title is-4">
+                <p class="discount_card">
                   <?php if ($producto['descuento'] > 0) {
                     echo trim($producto['descuento']), "% de descuento";
                   } ?>

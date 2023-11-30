@@ -89,17 +89,36 @@ th, td {
 
       position: relative;
     }
-
+    .img_card{
+      position: absolute;
+    top: 30px;
+    left: 60px;
+    right: 60px;
+    }
+    .price_card{
+      position: absolute;
+    bottom: 160px;
+    left: 60px;
+    right: 60px;
+    }
+    .discount_card{
+      position: absolute;
+    bottom: 130px;
+    left: 60px;
+    right: 60px;
+    }
     .name_card{
       position: absolute;
-    bottom: 70px;
-    float: center;
+    bottom: 60px;
+    left: 30px;
+    right: 30px;
 
    } 
    .button_card{
     position: absolute;
     bottom: 30px;
-    left: 70px;
+    left: 60px;
+    right: 60px;
    } 
 
 
