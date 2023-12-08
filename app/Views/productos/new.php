@@ -24,6 +24,10 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                             <input type = "text" class = "form-control" name = "nombre_producto" placeholder = "Ingrese el nombre del producto"/>
                                         </div>
                                         <div class = "form-group mb-3">
+                                            <label class = "form-label">Marca del Producto</label>
+                                            <input type = "text" class = "form-control" name = "marca" placeholder = "Ingrese la marca del producto"/>
+                                        </div>
+                                        <div class = "form-group mb-3">
                                             <label class = "form-label">Precio del Producto</label>
                                             <input type = "text" class = "form-control" name = "precio_producto" placeholder = "Ingrese el precio del producto"/>
                                         </div>
@@ -40,7 +44,7 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                             <input type = "text" class = "form-control" name = "mercancia_transito" placeholder = "Ingrese la cantidad de la mercancia que se encuentra en transito"/>
                                         </div>
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label" for = "nuevo_usado">Nuevo/Usado</label>
+                                            <label class = "form-label" >Nuevo/Usado</label>
                                                 <select name="nuevo_usado" id="nuevo_usado" class = "form-control">
                                                     <option value="Nuevo">Nuevo</option>
                                                     <option value="Usado">Usado</option>

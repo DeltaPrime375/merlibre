@@ -24,7 +24,7 @@
 
 
 .header a:hover {
-  background-color: yellow;
+  background-color: #FFF150;
   color: black;
 }
 
@@ -83,7 +83,7 @@ th, td {
       background-color: #FFFFFF;
       border: 10px solid #F5F5F5;
       padding: 20px;
-
+      
       text-align: center;
       height: 450px;
 
@@ -92,34 +92,37 @@ th, td {
     .img_card{
       position: absolute;
     top: 30px;
-    left: 60px;
-    right: 60px;
-    }
-    .price_card{
-      position: absolute;
-    bottom: 160px;
-    left: 60px;
-    right: 60px;
-    }
-    .discount_card{
-      position: absolute;
-    bottom: 130px;
+
     left: 60px;
     right: 60px;
     }
     .name_card{
       position: absolute;
-    bottom: 60px;
+    top: 250px;
+    text-align: left;
     left: 30px;
     right: 30px;
+    color: black;
+   } 
+   .original_price_card{
+      position: absolute;
+    bottom: 80px;
+    left: 30px;
+    color: black;
+    }
+    .price_card{
+      position: absolute;
+    bottom: 45px;
+    left: 30px;
+    color: black;
+    }
+    .discount_card{
+      position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: black;
+    }
 
-   } 
-   .button_card{
-    position: absolute;
-    bottom: 30px;
-    left: 60px;
-    right: 60px;
-   } 
 
 
 @media screen and (max-width: 500px) {

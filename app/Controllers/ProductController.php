@@ -94,4 +94,5 @@ class ProductController extends BaseController
         return redirect()->to(site_url('/productos'));
     }
     
+
 }

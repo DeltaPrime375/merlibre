@@ -28,24 +28,35 @@
     foreach ($productos as $producto): ?>
 
       <div class="grid-item">
-
+        <a href = "<?= base_url('productos/' . $producto['id_producto']) ?>">
+              
             <figure class="img_card">
               <img width="150" height= "50%" src=<?php echo trim($producto['imagen']) ?> alt="..." />
             </figure>
 
-                <p class="price_card">
-                  <?= "$",$producto['precio_producto'] ?>
+              <?php if ($producto['descuento'] > 0): ?>
+                <p ><h7 class="original_price_card text-decoration-line-through">
+                  <?= "$",$producto['precio_producto'] ?></h7>
                 </p>
+
+                <p ><h4 class="price_card">
+                  $<?php echo round (trim((($producto['precio_producto'])/100)*(100-($producto['descuento']))), 2)?></h4>
+                </p>
+              <?php else: ?>
+                <p ><h4 class="price_card">
+                  <?= "$",$producto['precio_producto'] ?></h4>
+                </p>
+              <?php endif?>
                 <p class="discount_card">
                   <?php if ($producto['descuento'] > 0) {
                     echo trim($producto['descuento']), "% de descuento";
                   } ?>
                 </p>
+
                 <p class="name_card">
                   <?= $producto['nombre_producto'] ?>
                 </p>
-                <div class = "button_card"><a href = "<?= base_url('productos/' . $producto['id_producto']) ?>"><button class = "btn btn-primary" >Pagina del producto</button></a></div>
-
+        </a>
       </div>
       
     <?php endforeach;

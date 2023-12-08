@@ -26,19 +26,35 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                             Ingrese el nombre del producto" value = "<?php if($producto['nombre_producto']): echo $producto['nombre_producto']; else: sett_value('nombre_producto'); endif;?>"/>
                                         </div>
                                         <div class = "form-group mb-3">
+                                            <label class = "form-label">Marca del Producto</label>
+                                            <input type = "text" class = "form-control" name = "marca" placeholder = "
+                                            Ingrese la marca del producto" value = "<?php if($producto['marca']): echo $producto['marca']; else: sett_value('marca'); endif;?>"/>
+                                        </div>
+                                        <div class = "form-group mb-3">
                                             <label class = "form-label">Precio del Producto</label>
                                             <input type = "text" class = "form-control" name = "precio_producto" placeholder = "
                                             Ingrese el precio del producto" value = "<?php if($producto['precio_producto']): echo $producto['precio_producto']; else: sett_value('precio_producto'); endif;?>"/>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Descuento</label>
-                                            <input type = "text" class = "form-control" name = "descuento" placeholder = "
-                                            Ingrese la cantidad de existencia del producto" value = "<?php if($producto['descuento']): echo $producto['descuento']; else: sett_value('descuento'); endif;?>"/>
+                                            <?php if (($producto['descuento']) > 0): ?>
+                                                <input type = "text" class = "form-control" name = "descuento" placeholder = "
+                                                Ingrese la cantidad de existencia del producto" value = "<?php if($producto['descuento']): echo $producto['descuento']; else: sett_value('descuento'); endif;?>"/>
+                                            <?php else: ?>
+                                                <br>
+                                                <label class = "form-label">Este producto no posee un descuento</label>
+                                                <input type = "text" class = "form-control" name = "descuento" placeholder = "Ingrese el porcentaje de descuento que se dara al producto"/>
+                                            <?php endif?>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Existencia</label>
-                                            <input type = "text" class = "form-control" name = "existencia" placeholder = "
-                                            Ingrese la cantidad de existencia del producto" value = "<?php if($producto['existencia']): echo $producto['existencia']; else: sett_value('existencia'); endif;?>"/>
+                                            <?php if (($producto['existencia']) > 0): ?>
+                                                <input type = "text" class = "form-control" name = "existencia" placeholder = "
+                                                Ingrese la cantidad de existencia del producto" value = "<?php if($producto['existencia']): echo $producto['existencia']; else: sett_value('existencia'); endif;?>"/>
+                                            <?php else: ?>
+                                                <label class = "form-label"><br>El producto no tiene existencia disponible actualmente</label>
+                                                <input type = "text" class = "form-control" name = "existencia" placeholder = "Ingrese la nueva cantidad de existencia del producto"/>
+                                            <?php endif?>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Mercancia/Transito</label>
@@ -46,14 +62,23 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                             Ingrese el precio del producto" value = "<?php if($producto['mercancia_transito']): echo $producto['mercancia_transito']; else: sett_value('mercancia_transito'); endif;?>"/>
                                         </div>
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">Nuevo/Usado</label>
-                                            <input type = "text" class = "form-control" name = "nuevo_usado" placeholder = "
-                                            Ingrese si el producto es nuevo o usado" value = "<?php if($producto['nuevo_usado']): echo $producto['nuevo_usado']; else: sett_value('nuevo_usado'); endif;?>"/>
+                                            <label class = "form-label" for = "nuevo_usado">Nuevo/Usado</label>
+                                            
+                                            <select name="nuevo_usado" id="nuevo_usado" class = "form-control">
+                                                    <option value="Nuevo">Nuevo</option>
+                                                    <option value="Usado">Usado</option>
+                                                    
+                                            </select>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Descripcion</label>
                                             <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "
                                             Ingrese una descripcion del producto" value = "<?php if($producto['descripcion_general']): echo $producto['descripcion_general']; else: sett_value('descripcion_general'); endif;?>"/>
+                                        </div>
+                                        <div class = "form-group mb-3">
+                                            <label class = "form-label">Imagen</label>
+                                            <input type = "text" class = "form-control" name = "imagen" placeholder = "
+                                            Ingrese el enlace de la imagen del producti" value = "<?php if($producto['imagen']): echo $producto['imagen']; else: sett_value('imagen'); endif;?>"/>
                                         </div>
                                         <button type = "submit" class = "btn btn-success">Modificar Producto</button>
                                     </div>
