@@ -25,6 +25,7 @@ $routes->get('productos/(:num)','ProductController::show/$1'); //Mostrar datos d
 $routes->get('productos/edit/(:num)','ProductController::edit/$1'); //Cargar vista para modificar datos de un producto
 $routes->put('productos/(:num)','ProductController::update/$1'); //Modificar los datos de un producto
 $routes->delete('productos/(:num)','ProductController::delete/$1'); //Eliminar un producto
+$routes->get('productos/search','ProductController::search_index'); //Obtener productos registrados
 
 //Rutas carrito
 $routes->get('carrito','CartController::index'); //Obtener productos registrados en el carrito por el usuario

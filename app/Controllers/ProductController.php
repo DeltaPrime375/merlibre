@@ -16,7 +16,7 @@ class ProductController extends BaseController
 
     public function index()
     {
-        $productos = $this->ProductModel->orderBy('id_producto','asc')->findall();
+        $productos = $this->ProductModel->orderBy('id_producto','desc')->findall();
         return view('productos/index',compact('productos'));
     }
 
@@ -41,6 +41,7 @@ class ProductController extends BaseController
         $this->ProductModel->save([
             'id_proveedor' => $this->request->getVar('id_proveedor'),
             'nombre_producto' => $this->request->getVar('nombre_producto'),
+            'marca' => $this->request->getVar('marca'),
             'precio_producto' => $this->request->getVar('precio_producto'),
             'descuento' => $this->request->getVar('descuento'),
             'existencia' => $this->request->getVar('existencia'),
@@ -74,6 +75,7 @@ class ProductController extends BaseController
             'id_producto' => $id_producto,
             'id_proveedor' => $this->request->getVar('id_proveedor'),
             'nombre_producto' => $this->request->getVar('nombre_producto'),
+            'marca' => $this->request->getVar('marca'),
             'precio_producto' => $this->request->getVar('precio_producto'),
             'descuento' => $this->request->getVar('descuento'),
             'existencia' => $this->request->getVar('existencia'),
@@ -94,5 +96,12 @@ class ProductController extends BaseController
         return redirect()->to(site_url('/productos'));
     }
     
+    public function search_index(){
+        $buscar=$this->request->getGet('buscar');
+        $productos = $this->ProductModel->orderBy('id_producto','desc')->like('nombre_producto', $buscar)->findall();
+
+        return view('productos/search',compact('productos'), $productos);
+    }
+
 
 }

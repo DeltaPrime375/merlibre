@@ -4,14 +4,6 @@ $this->section('title')?> Listado de Productos <?= $this->endSection()?>
 
 <?= $this->section('content'); ?> 
 
-    <div class = "container">
-        <div class = "row py-4">
-            <div class = "col-x1-12 text-end">
-                <a href = "<?= base_url('productos/new')?>" class = "btn btn-primary">Nuevo Producto</a>
-            </div>
-        </div>
-    </div>
-
     <div class = "row py-2">
         <div class = "col-x1-12">
             <?php 

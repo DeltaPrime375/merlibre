@@ -142,13 +142,28 @@ th, td {
 <header class="header">
   <a href="/" class="logo">Mercado Libre</a>
   <div class="header-right">
-    <a><input type = "text" class = "form-control" placeholder = "Buscar productos"/></a>
+
+
+    <a>
+    <form action="<?= base_url('productos/search')?>">
+      <input id= "search_query" type="search" method = "get" placeholder = "Buscar productos" name="buscar">
+      <button type="submit">Buscar</button>
+    </form>
+    </a>
+
     <a href="<?= base_url('usuarios')?>">Usuarios</a>
+
+
     <a href="<?= base_url('usuarios/new')?>">Creá tu cuenta</a>
     <a href="<?= base_url('usuarios/login')?>">Ingresá</a>
+
+
     <a href="<?= base_url('productos/new')?>">Vender</a>
+
     <a href="<?= base_url('historial')?>">Mis Compras</a>
+    
     <a href="<?= base_url('carrito')?>">Carrito</a>
+    
   </div>
 </header>
     <head>

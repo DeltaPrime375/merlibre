@@ -17,7 +17,7 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                         <h5 class = "card-title">Editar datos del  producto</h5>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">ID del Proveedor</label>
-                                            <input type = "text" class = "form-control" name = "id_proveedor" placeholder = "
+                                            <input type = "text" class = "form-control" name = "id_proveedor"  placeholder = "
                                             Ingrese el ID del proveedor" value = "<?php if($producto['id_proveedor']): echo $producto['id_proveedor']; else: sett_value('id_proveedor'); endif;?>"/>
                                         </div>
                                         <div class = "form-group mb-3">
@@ -25,11 +25,13 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                             <input type = "text" class = "form-control" name = "nombre_producto" placeholder = "
                                             Ingrese el nombre del producto" value = "<?php if($producto['nombre_producto']): echo $producto['nombre_producto']; else: sett_value('nombre_producto'); endif;?>"/>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Marca del Producto</label>
                                             <input type = "text" class = "form-control" name = "marca" placeholder = "
                                             Ingrese la marca del producto" value = "<?php if($producto['marca']): echo $producto['marca']; else: sett_value('marca'); endif;?>"/>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Precio del Producto</label>
                                             <input type = "text" class = "form-control" name = "precio_producto" placeholder = "
@@ -66,14 +68,18 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                             
                                             <select name="nuevo_usado" id="nuevo_usado" class = "form-control">
                                                     <option value="Nuevo">Nuevo</option>
-                                                    <option value="Usado">Usado</option>
-                                                    
+                                                    <option value="Usado">Usado</option>                                                   
                                             </select>
                                         </div>
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">Descripcion</label>
-                                            <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "
+                                            <label class = "form-label">Descripcion</label>                               
+                                            <?php if (($producto['descripcion_general'])!=null): ?>
+                                                <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "
                                             Ingrese una descripcion del producto" value = "<?php if($producto['descripcion_general']): echo $producto['descripcion_general']; else: sett_value('descripcion_general'); endif;?>"/>
+                                            <?php else: ?>
+                                                <label class = "form-label"><br>El producto no tiene una descripcion asignada</label>
+                                                <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "Ingrese una descripcion a detalle del producto"/>
+                                            <?php endif?>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Imagen</label>

@@ -23,10 +23,12 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                             <label class = "form-label">Nombre del Producto</label>
                                             <input type = "text" class = "form-control" name = "nombre_producto" placeholder = "Ingrese el nombre del producto"/>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Marca del Producto</label>
                                             <input type = "text" class = "form-control" name = "marca" placeholder = "Ingrese la marca del producto"/>
                                         </div>
+                                        
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Precio del Producto</label>
                                             <input type = "text" class = "form-control" name = "precio_producto" placeholder = "Ingrese el precio del producto"/>
