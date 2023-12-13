@@ -4,8 +4,7 @@ $this->section('title')?> Listado de Productos <?= $this->endSection()?>
 
 <?= $this->section('content'); ?> 
 
-    <div class = "row py-2">
-        <div class = "col-x1-12">
+
             <?php 
             if(session()->getFlashdata('success')): ?>
                 <div class = "alert alert-success alert-dismissible">
@@ -19,68 +18,55 @@ $this->section('title')?> Listado de Productos <?= $this->endSection()?>
                 </div>
             <?php endif; ?>
 
-            <div class = "card">
-                <div class = "card-header">
-                    <h5 class = "card-title">Productos</h5>
-                </div>
-                <div class="card-body">
-                    <table class ="table table-striped">
-                        <theah>
-                            <tr>
-                                <th>Nombre Producto</th>
-                                <th>Precio Producto</th>
-                                <th>Descuento</th>
+            <body>
+  <div class="card-header">
+    <h2 class="card-title">Ultimos Productos</h2>
+  </div>
 
-                                <th>Accion</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                if(count($productos) > 0):
-                                    foreach($productos as $producto): ?>
-                                    <tr>
-                                        <td><?= $producto['nombre_producto']?></td>
-                                        <td><?= $producto['precio_producto']?></td>
-                                        <td><?= $producto['descuento']?></td>
+  <div class="grid-container">
+    <?php
+    if (count($productos) > 0):
+    foreach ($productos as $producto): ?>
 
+      <div class="grid-item">
+        <a href = "<?= base_url('productos/' . $producto['id_producto']) ?>">
+              
+            <figure class="img_card">
+              <img width="140" height= "50%" src=<?php echo trim($producto['imagen']) ?> alt="..." />
+            </figure>
 
-                                        <td class = "d-flex">
-                                            <a href = "<?= base_url('productos/'.$producto['id_producto'])?>" class = "btn btn-sm btn-info mx-1" title = "Mostrar"><i class = "bi bi-info-square"></i></a>
-                                            
-                                            <a href = "<?= base_url('productos/edit/'.$producto['id_producto'])?>" class = "btn btn-sm btn-success mx-1" title = "Editar"><i class = "bi bi-pencil-square"></i></a>
-                                            
-                                            <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$producto['id_producto']) ?>" 
-                                        id = "deleteProducto<?=$producto['id_producto']?>">
-                                        <input type = "hidden" name = "_method" value = "DELETE"/>
-                                            <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$producto['id_producto']?>')" 
-                                            class="btn btn-sm btn-danger" title="Eliminar"><i class="bi bi-trash"></i></a>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    
-                                <?php endforeach;
-                                    else: ?>
-                                    <tr rowspan="1">
-                                        <tr colspan = "4">
-                                            <h6 class = "text-danger text-center">No se encontraron productos</h6>
-                                        </tr>
-                                    </tr>
-                                <?php endif ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+              <?php if ($producto['descuento'] > 0): ?>
+                <p ><h7 class="original_price_card text-decoration-line-through">
+                  <?= "$",$producto['precio_producto'] ?></h7>
+                </p>
 
-    <script>
-        function deleteProducto(formId){
-            let confirm = window.confirm('¿Está seguro que desea eliminar este producto');
-            if(confirm){
-                document.getElementById(formId).submit();
-            }
-        }
-    </script>
+                <p ><h4 class="price_card">
+                  $<?php echo round (trim((($producto['precio_producto'])/100)*(100-($producto['descuento']))), 2)?></h4>
+                </p>
+              <?php else: ?>
+                <p ><h4 class="price_card">
+                  <?= "$",$producto['precio_producto'] ?></h4>
+                </p>
+              <?php endif?>
+                <p class="discount_card">
+                  <?php if ($producto['descuento'] > 0) {
+                    echo trim($producto['descuento']), "% de descuento";
+                  } ?>
+                </p>
+
+                <p class="name_card">
+                  <?= $producto['nombre_producto'] ?>
+                </p>
+        </a>
+      </div>
+      
+    <?php endforeach;
+    else:?>
+      <h6 class="text-danger text-center">No se encontraron productos</h6>
+    <?php endif ?>
+  </div>
+
+</body>
 
 
 <?= $this->endSection() ?>

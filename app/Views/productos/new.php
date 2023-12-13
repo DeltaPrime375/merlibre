@@ -61,6 +61,10 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                             <label class = "form-label">Imagen</label>
                                             <input type = "text" class = "form-control" name = "imagen" placeholder = "Ingrese el enlace web de la imagen"/>
                                         </div>
+                                        <div class = "form-group mb-3">
+                                            <label class = "form-label">Imagen</label>
+                                            <input type = "text" class = "form-control" name = "tiempo_surtido" placeholder = "Ingrese en cuanto tiempo se surtira el producto"/>
+                                        </div>
                                         <button type = "submit" class = "btn btn-success">Guardar Producto</button>
                                     </div>
                                 </div>

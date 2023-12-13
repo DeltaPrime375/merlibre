@@ -91,7 +91,7 @@ th, td {
     }
     .img_card{
       position: absolute;
-    top: 30px;
+    top: 20px;
 
     left: 60px;
     right: 60px;
@@ -123,7 +123,9 @@ th, td {
     color: black;
     }
 
-
+.boton{
+  color: black;
+}
 
 @media screen and (max-width: 500px) {
   .header a {

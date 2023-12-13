@@ -67,7 +67,8 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 
                                         
 
-                        <br><div class="small">Marca: <?php echo trim($producto['marca'])?></div>
+                        <br><div class="small">Se entrega en <?php echo trim($producto['tiempo_surtido'])?> dias</div>
+                        <div class="small">Marca: <?php echo trim($producto['marca'])?></div>
                         <div class="small">Vendido por: </div><br>
                         <p class="lead descripcion"><?php echo trim($producto['descripcion_general'])?></p>
 

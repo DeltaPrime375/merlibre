@@ -7,6 +7,7 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
 
             <div class = "row">
                 <div class = "col-xl-6 m-auto">
+
                     <form action = "<?=base_url('productos/'.$producto['id_producto']) ?>" method = "POST"> 
                         <?=csrf_field() ?>
                         <input type = "hidden" name = "_method" value = "PUT">
@@ -15,11 +16,13 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                 <div class = "card shadow">
                                     <div class = "card-body">
                                         <h5 class = "card-title">Editar datos del  producto</h5>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">ID del Proveedor</label>
                                             <input type = "text" class = "form-control" name = "id_proveedor"  placeholder = "
                                             Ingrese el ID del proveedor" value = "<?php if($producto['id_proveedor']): echo $producto['id_proveedor']; else: sett_value('id_proveedor'); endif;?>"/>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Nombre del Producto</label>
                                             <input type = "text" class = "form-control" name = "nombre_producto" placeholder = "
@@ -48,6 +51,7 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                                 <input type = "text" class = "form-control" name = "descuento" placeholder = "Ingrese el porcentaje de descuento que se dara al producto"/>
                                             <?php endif?>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Existencia</label>
                                             <?php if (($producto['existencia']) > 0): ?>
@@ -58,11 +62,21 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                                 <input type = "text" class = "form-control" name = "existencia" placeholder = "Ingrese la nueva cantidad de existencia del producto"/>
                                             <?php endif?>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Mercancia/Transito</label>
-                                            <input type = "text" class = "form-control" name = "mercancia_transito" placeholder = "
-                                            Ingrese el precio del producto" value = "<?php if($producto['mercancia_transito']): echo $producto['mercancia_transito']; else: sett_value('mercancia_transito'); endif;?>"/>
+
+                                            <?php if (($producto['mercancia_transito']) > 0): ?>
+                                                <input type = "text" class = "form-control" name = "mercancia_transito" placeholder = "
+                                                Ingrese la cantidad de la mercancia que se encuentra en transito" value = "<?php if($producto['mercancia_transito']): echo $producto['mercancia_transito']; else: sett_value('mercancia_transito'); endif;?>"/>
+                                            <?php else: ?>
+                                                <label class = "form-label"><br>El producto no tiene mercancia en transito</label>
+                                                <input type = "text" class = "form-control" name = "mercancia_transito" placeholder = "Ingrese la cantidad de la mercancia que se encuentra en transito"/>
+                                            <?php endif?>
+
+                                           
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label" for = "nuevo_usado">Nuevo/Usado</label>
                                             
@@ -71,6 +85,7 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                                     <option value="Usado">Usado</option>                                                   
                                             </select>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Descripcion</label>                               
                                             <?php if (($producto['descripcion_general'])!=null): ?>
@@ -81,11 +96,19 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                                 <input type = "text" class = "form-control" name = "descripcion_general" placeholder = "Ingrese una descripcion a detalle del producto"/>
                                             <?php endif?>
                                         </div>
+
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Imagen</label>
                                             <input type = "text" class = "form-control" name = "imagen" placeholder = "
-                                            Ingrese el enlace de la imagen del producti" value = "<?php if($producto['imagen']): echo $producto['imagen']; else: sett_value('imagen'); endif;?>"/>
+                                            Ingrese el enlace de la imagen del producto" value = "<?php if($producto['imagen']): echo $producto['imagen']; else: sett_value('imagen'); endif;?>"/>
                                         </div>
+
+                                        <div class = "form-group mb-3">
+                                            <label class = "form-label">Imagen</label>
+                                            <input type = "text" class = "form-control" name = "tiempo_surtido" placeholder = "
+                                            Ingrese en cuanto tiempo se surtira el producto" value = "<?php if($producto['tiempo_surtido']): echo $producto['tiempo_surtido']; else: sett_value('tiempo_surtido'); endif;?>"/>
+                                        </div>
+
                                         <button type = "submit" class = "btn btn-success">Modificar Producto</button>
                                     </div>
                                 </div>

@@ -31,7 +31,7 @@
         <a href = "<?= base_url('productos/' . $producto['id_producto']) ?>">
               
             <figure class="img_card">
-              <img width="150" height= "50%" src=<?php echo trim($producto['imagen']) ?> alt="..." />
+              <img width="140" height= "50%" src=<?php echo trim($producto['imagen']) ?> alt="..." />
             </figure>
 
               <?php if ($producto['descuento'] > 0): ?>
