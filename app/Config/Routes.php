@@ -7,15 +7,17 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+$routes->get('inicio','UsuariosController::inicio'); //Obtener productos registrados
+
 //Rutas Usuarios
-$routes->get('usuarios','UsuariosController::index'); //Obtener productos registrados
-$routes->get('usuarios/new','UsuariosController::new'); //Cargar vista para registrar un nuevo producto
-$routes->post('usuarios','UsuariosController::create'); //Crear un nuevo producto
-$routes->get('usuarios/(:num)','UsuariosController::show/$1'); //Mostrar datos de un producto
-$routes->get('usuarios/edit/(:num)','UsuariosController::edit/$1'); //Cargar vista para modificar datos de un producto
-$routes->put('usuarios/(:num)','UsuariosController::update/$1'); //Modificar los datos de un producto
-$routes->delete('usuarios/(:num)','UsuariosController::delete/$1'); //Eliminar un producto
-$routes->get('usuarios/login','UsuariosController::login'); //Mostrar datos de un producto
+$routes->get('usuarios','UsuariosController::index'); //Obtener usuarios registrados
+$routes->get('usuarios/new','UsuariosController::new'); //Cargar vista para registrar un nuevo usuario
+$routes->post('usuarios','UsuariosController::create'); //Crear un nuevo usuario
+$routes->get('usuarios/(:num)','UsuariosController::show/$1'); //Mostrar datos de un usuario
+$routes->get('usuarios/edit/(:num)','UsuariosController::edit/$1'); //Cargar vista para modificar datos de un usuario
+$routes->put('usuarios/(:num)','UsuariosController::update/$1'); //Modificar los datos de un usuario
+$routes->delete('usuarios/(:num)','UsuariosController::delete/$1'); //Eliminar un usuario
+$routes->get('usuarios/login','UsuariosController::login'); //Mostrar datos de un usuario
 
 //Rutas Productos
 $routes->get('productos','ProductController::index'); //Obtener productos registrados
