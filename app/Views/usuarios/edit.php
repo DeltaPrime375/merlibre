@@ -19,7 +19,7 @@ $this->section('title')?> Modificar datos de un usuario <?= $this->endSection()?
                                     <div class = "card-body">
                                         <h5 class = "card-title">Editar datos del usuario</h5>
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">Nombre</label>
+                                            <label class = "form-label">Nombre del usuario</label>
                                             <input type = "text" class = "form-control" name = "nombre_usuario" placeholder = "Ingrese su nombre"
                                              value = "<?php if($usuario['nombre_usuario']): echo $usuario['nombre_usuario']; else: sett_value('nombre_usuario'); endif;?>"/>
                                         </div>
@@ -58,6 +58,7 @@ $this->section('title')?> Modificar datos de un usuario <?= $this->endSection()?
                                             <input type = "text" class = "form-control" name = "contraseña" placeholder = "Ingrese su RFC" 
                                             value = "<?php if($usuario['contraseña']): echo $usuario['contraseña']; else: sett_value('contraseña'); endif;?>"/>
                                         </div>
+                                        
                                         <button type = "submit" class = "btn btn-success">Modificar Producto</button>
                                     </div>
                                 </div>

@@ -123,10 +123,6 @@ th, td {
     color: black;
     }
 
-.boton{
-  color: black;
-}
-
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -145,8 +141,7 @@ th, td {
   <a href="/" class="logo">Mercado Libre</a>
   <div class="header-right">
 
-
-    <a>
+  <a>
     <form action="<?= base_url('productos/search')?>">
       <input id= "search_query" type="search" method = "get" placeholder = "Buscar productos" name="buscar">
       <button type="submit">Buscar</button>
@@ -165,7 +160,9 @@ th, td {
     <a href="<?= base_url('historial')?>">Mis Compras</a>
     
     <a href="<?= base_url('carrito')?>">Carrito</a>
-    
+<!--
+
+-->
   </div>
 </header>
     <head>

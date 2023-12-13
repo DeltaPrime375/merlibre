@@ -4,18 +4,18 @@ $this->section('title')?> Detalles del usuario <?= $this->endSection()?>
 <?= $this->section('content')?> 
 
     <div class = "container">
-        <div class = "row py-4">
+    <div class = "row py-4">
             <div class = "col-x1-12 text-end">
-                <a href = "<?= base_url('/')?>" class = "btn btn-primary">Regresar a Pagina de inicio</a>
+                <a href = "<?= base_url('usuarios')?>" class = "btn btn-primary">Regresar a usuarios</a>
             </div>
-        </div>    
+        </div>   
 
         <div class = "row">
             <div class = "col-xl-6 m-auto">
                 <div class = "col-sm-12">
                     <div class = "card shadow">
                         <div class = "card-body">
-                                <h5 class = "card-title">Informacion general del usuario</h5>
+                                <h5 class = "card-title">Detalles del Usuario</h5>
                                 <div class = "form-group mb-3">
                                     <label class = "form-label">ID del usuario</label>
                                     <input type = "text" class = "form-control" disabled placeholder = "ID del usuario" value = "<?php echo trim($usuario['id_usuario'])?>"/>

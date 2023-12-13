@@ -8,7 +8,7 @@ $this->section('title')?> Inicio de sesión<?= $this->endSection()?>
             <div class = "row">
                 <div class = "col-xl-6 m-auto">
 
-                    <form action = "<?=base_url('usuarios/login') ?> " method="POST"> 
+                    <form action = "<?=base_url('inicio') ?>"> 
 
                         <?=csrf_field() ?>
                         <div class = "row">
@@ -19,12 +19,12 @@ $this->section('title')?> Inicio de sesión<?= $this->endSection()?>
                                         <h5 class = "card-title">Inserte sus datos para iniciar sesión</h5>
 
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">Apodo</label>
-                                            <input type = "text" class = "form-control" name = "apodo_usuario" placeholder = "Ingrese su apodo de usuario"/>
+                                            <label class = "form-label">Correo Electronico</label>
+                                            <input type = "text" class = "form-control" name = "correo_electronico" placeholder = "Ingrese su correo electronico"/>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Contraseña</label>
-                                            <input type = "text" class = "form-control" name = "contraseña" placeholder = "Ingrese su contraseña"/>
+                                            <input type = "password" class = "form-control" autocomplete = "off" name = "contraseña" placeholder = "Ingrese su contraseña"/>
                                         </div>
                                         <button name = "btn_ingresar" type = "submit" class = "btn btn-success" >Iniciar sesión</button>
 
