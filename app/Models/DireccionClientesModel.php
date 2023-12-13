@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class DireccionClientesModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'usuarios';
-    protected $primaryKey       = 'id_usuario';
+    protected $table            = 'direccion_clientes';
+    protected $primaryKey       = 'id_cliente';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nombre_usuario', 'apellido_paterno', 'apellido_materno', 'apodo_usuario','correo_electronico', 'telefono', 'RFC', 'contraseña'];
+    protected $allowedFields    = ['calle','numero','colonia','ciudad','estado','pais','CP','detalles_domicilio'];
 
     // Dates
     protected $useTimestamps = false;
