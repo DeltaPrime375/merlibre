@@ -26,7 +26,7 @@ $this->section('title')?> Inicio de sesión<?= $this->endSection()?>
                                             <label class = "form-label">Contraseña</label>
                                             <input type = "password" class = "form-control" autocomplete = "off" name = "contraseña" placeholder = "Ingrese su contraseña"/>
                                         </div>
-                                        <button name = "btn_ingresar" type = "submit" class = "btn btn-success" >Iniciar sesión</button>
+                                        <button type = "submit" class = "btn btn-success">Iniciar sesión</button>
 
                                         <div class = "form-group mb-3">
                                             <br><a href="<?= base_url('usuarios/new')?>">Crear Cuenta</a>
@@ -36,7 +36,6 @@ $this->section('title')?> Inicio de sesión<?= $this->endSection()?>
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
