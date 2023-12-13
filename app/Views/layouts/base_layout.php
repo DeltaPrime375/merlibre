@@ -147,7 +147,7 @@ th, td {
       <button type="submit">Buscar</button>
     </form>
     </a>
-
+<!--
     <a href="<?= base_url('usuarios')?>">Usuarios</a>
 
 
@@ -160,11 +160,37 @@ th, td {
     <a href="<?= base_url('historial')?>">Mis Compras</a>
     
     <a href="<?= base_url('carrito')?>">Carrito</a>
-<!--
 
--->
+  -->
+  <?php 
+        if ( $_SESSION['Usuario'] != 0 ){
+          ?>
+            <a href="<?= base_url('usuarios')?>"><?php echo '<h5> <FONT COLOR="black"> Perfil</FONT></h5>'?></a>
+            <a href="<?= base_url('productos/new')?>"><?php echo '<h5> <FONT COLOR="black"> Vender</FONT></h5>'?></a>
+            <a href="<?= base_url('compras')?>"><?php echo '<h5> <FONT COLOR="black"> Mis Compras</FONT></h5>'?></a>
+            <a href="<?= base_url('carrito')?>"><?php echo '<h5> <FONT COLOR="black"> Carrito</FONT></h5>'?></a>
+            <a href="<?= base_url('ventas/domicilio/'.$_SESSION['Usuario'])?>"><?php echo '<h5> <FONT COLOR="black"> Pagar</FONT></h5>'?></a>
+            <br>
+          <?php 
+        }else {
+          ?>
+            <a href="<?= base_url('usuarios/login')?>">Perfil</a>
+            <a href="<?= base_url('usuarios/new')?>">Creá tu cuenta</a>
+            <a href="<?= base_url('usuarios/login')?>">Ingresá</a>
+            <a href="<?= base_url('usuarios/login')?>">Vender</a>
+            <a href="<?= base_url('usuarios/login')?>">Mis Compras</a>
+            <a href="<?= base_url('usuarios/login')?>">Carrito</a>
+            <a>Pagar</a>
+          <?php 
+
+        }
+      ?>
+
   </div>
 </header>
+<?php /*if ($_SESSION['Usuario'] <> 0){
+    echo '<div style="position: absolute;top:  2px;left: 890px;"><big><FONT COLOR="red"> Usuario:  '.$_SESSION['Nombre'].'</FONT></big></div>';
+} */?>
     <head>
         <meta charset = "UTF-8">
         <meta http-equiv = "X-UA-Compatible" content = "IE-Edge">
