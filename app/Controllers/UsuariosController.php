@@ -135,7 +135,7 @@ class UsuariosController extends BaseController
     public function inicio()
     {
         $Correo = $this->request->getVar('correo_electronico');
-        $Contrasena = $this->request->getVar('contrasena');
+        $Contrasena = $this->request->getVar('contraseña');
         $db = db_connect();
         $query = $db->query("SELECT * FROM usuarios");        
         $usuarios= $query->getResult();
@@ -144,7 +144,7 @@ class UsuariosController extends BaseController
         $Nombre =" ";
         foreach($usuarios as $usr){
             if ($usr->correo_electronico == $Correo) {
-                if($usr->contrasena == $Contrasena){
+                if($usr->contraseña == $Contrasena){
                     $Existe = 1;
                     $Nombre=$usr->nombre_usuario." ".$usr->apellido_paterno." ".$usr->apellido_materno;
                     $Usuario = $usr->id_usuario;

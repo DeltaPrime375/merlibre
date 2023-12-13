@@ -16,8 +16,11 @@ $this->section('title')?> Registrar nuevo producto <?= $this->endSection()?>
                                     <div class = "card-body">
                                         <h5 class = "card-title">Registrar nuevo producto para la venta</h5>
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">ID del Proveedor</label>
-                                            <input type = "text" class = "form-control" name = "id_proveedor" placeholder = "Ingrese el ID del proveedor"/>
+                                            <label class = "form-label">Proveedor</label>
+                                            <?php  echo  "<h5> <FONT COLOR='black'>".$_SESSION['Usuario']." ".$_SESSION['Nombre']."</FONT> </h5>" ?>
+                                            
+                                            <input type = "hidden" class = "form-control" name = "id_proveedor" value="<?php echo "".$_SESSION['Usuario']."" ?>"/>
+                                            
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Nombre del Producto</label>

@@ -3254,3 +3254,633 @@ in APPPATH\Controllers\UsuariosController.php on line 28.
  4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:30:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 15.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:30:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$ProductModel is deprecated in APPPATH\Controllers\Home.php on line 16.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:30:43 --> Undefined variable $usuariosModel
+in APPPATH\Controllers\UsuariosController.php on line 28.
+ 1 APPPATH\Controllers\UsuariosController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuariosModel', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 28)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:30:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 15.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:30:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$ProductModel is deprecated in APPPATH\Controllers\Home.php on line 16.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Home->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:32:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:32:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:32:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:32:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:33:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:33:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:33:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:33:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:33:33 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:34:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:34:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:34:15 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:34:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:34:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:34:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:34:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:34:21 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:35:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:35:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:35:00 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:35:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:35:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:35:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:35:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:35:05 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:35:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:35:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:35:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:35:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:35:45 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:36:30 --> Undefined property: stdClass::$contrasena
+in APPPATH\Controllers\UsuariosController.php on line 147.
+ 1 APPPATH\Controllers\UsuariosController.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasena', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 147)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->inicio()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:36:51 --> Undefined variable $usuariosModel
+in APPPATH\Controllers\UsuariosController.php on line 28.
+ 1 APPPATH\Controllers\UsuariosController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuariosModel', 'C:\\xampp\\htdocs\\merlibre\\app\\Controllers\\UsuariosController.php', 28)
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\UsuariosController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$session is deprecated in APPPATH\Controllers\UsuariosController.php on line 17.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\UsuariosController::$usuariosModel is deprecated in APPPATH\Controllers\UsuariosController.php on line 18.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\UsuariosController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:36:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:36:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:41:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:41:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:42:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:42:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:48:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:48:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:49:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:49:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:49:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:49:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:49:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:49:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:55:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:55:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+CRITICAL - 2023-12-13 19:55:48 --> Undefined variable $usuario
+in APPPATH\Views\productos\edit.php on line 26.
+ 1 APPPATH\Views\productos\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\merlibre\\app\\Views\\productos\\edit.php', 26)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(228): include('C:\\xampp\\htdocs\\merlibre\\app\\Views\\productos\\edit.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('productos/edit', [], true)
+ 5 APPPATH\Controllers\ProductController.php(64): view('productos/edit', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\ProductController->edit('16')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:56:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:56:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:56:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:56:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:56:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:56:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:56:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:56:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\VentasController::$session is deprecated in APPPATH\Controllers\VentasController.php on line 28.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\VentasController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\VentasController::$Modelodireccioncliente is deprecated in APPPATH\Controllers\VentasController.php on line 31.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\VentasController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\VentasController::$session is deprecated in APPPATH\Controllers\VentasController.php on line 28.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\VentasController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\VentasController::$Modelodireccioncliente is deprecated in APPPATH\Controllers\VentasController.php on line 31.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\VentasController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:57:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:57:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+INFO - 2023-12-13 19:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-13 19:58:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$session is deprecated in APPPATH\Controllers\ProductController.php on line 13.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')
+WARNING - 2023-12-13 19:58:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\ProductController::$ProductModel is deprecated in APPPATH\Controllers\ProductController.php on line 14.
+ 1 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\ProductController->__construct()
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\merlibre\\public\\index.php')

@@ -18,9 +18,8 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                         <h5 class = "card-title">Editar datos del  producto</h5>
 
                                         <div class = "form-group mb-3">
-                                            <label class = "form-label">ID del Proveedor</label>
-                                            <input type = "text" class = "form-control" name = "id_proveedor"  placeholder = "
-                                            Ingrese el ID del proveedor" value = "<?php if($producto['id_proveedor']): echo $producto['id_proveedor']; else: sett_value('id_proveedor'); endif;?>"/>
+                                            <label class = "form-label">Proveedor</label>
+                                            <input type = "text" class = "form-control" disabled placeholder = "ID del usuario" value = "<?php echo trim($producto['id_proveedor'])?>"/>
                                         </div>
 
                                         <div class = "form-group mb-3">
