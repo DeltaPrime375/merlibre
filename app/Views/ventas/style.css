@@ -1,0 +1,8 @@
+.encabezamiento{
+    height: 80px;
+    width: 100%;
+    background-color: #ffce53; 
+    position: fixed;
+    top: 0;
+}
+*{Background-color : #299099;}
