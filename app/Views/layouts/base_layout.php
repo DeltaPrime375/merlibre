@@ -188,9 +188,9 @@ th, td {
 
   </div>
 </header>
-<?php /*if ($_SESSION['Usuario'] <> 0){
+<?php if ($_SESSION['Usuario'] <> 0){
     echo '<div style="position: absolute;top:  2px;left: 890px;"><big><FONT COLOR="red"> Usuario:  '.$_SESSION['Nombre'].'</FONT></big></div>';
-} */?>
+}?>
     <head>
         <meta charset = "UTF-8">
         <meta http-equiv = "X-UA-Compatible" content = "IE-Edge">

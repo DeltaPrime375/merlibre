@@ -20,6 +20,8 @@ class Home extends ResourceController
     public function index(): string
     {
         $productos = $this->ProductModel->orderBy('id_producto','desc')->findall();
+        $_SESSION['Usuario'] = 0;
+        $_SESSION['Nombre'] = " ";
         return view('merlibre_home',compact('productos'));
         //return view('welcome_message');
     }
