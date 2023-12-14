@@ -39,7 +39,19 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                         </div>
                         
                         <div >
-                            <?php if(($producto['existencia']) >= 1): ?>
+
+
+                            <?php if ( $_SESSION['Usuario'] == $producto['id_proveedor'] ){ ?>
+                            <a href = "<?= base_url('productos/edit/'.$producto['id_producto'])?>" class = "btn btn-sm btn-success mx-1" title = "Editar">Editar Producto<i class = "bi bi-pencil-square"></i></a>
+                                            
+                            <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$producto['id_producto']) ?>" 
+                            id = "deleteProducto<?=$producto['id_producto']?>">
+                                <input type = "hidden" name = "_method" value = "DELETE">
+                                <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$producto['id_producto']?>')" 
+                                class="btn btn-sm btn-danger" title="Eliminar">Eliminar Producto<i class="bi bi-trash"></i></a>
+                            </form>
+                        <?php }else {?>   
+                        <?php if(($producto['existencia']) >= 1): ?>
                             <span>
                                 <?php if(($producto['existencia']) == 1): ?>
                                     <div class="small mb-1">¡Último disponible!</div>
@@ -60,8 +72,8 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                 
                             <?php else: ?>
                                 <div class="small mb-1">Este producto no está disponible por el momento</div>
-                            <?php endif?>    
-                            
+                            <?php endif?> 
+                        <?php } ?>
                         </div>
 
                         
@@ -73,17 +85,7 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                         <div class="small">Vendido por: Vendedor <?php echo trim($producto['id_proveedor'])?></div><br>
                         <p class="lead descripcion"><?php echo trim($producto['descripcion_general'])?></p>
                         
-                        <?php if ( $_SESSION['Usuario'] == $producto['id_proveedor'] ){ ?>
-                            <a href = "<?= base_url('productos/edit/'.$producto['id_producto'])?>" class = "btn btn-sm btn-success mx-1" title = "Editar">Editar Producto<i class = "bi bi-pencil-square"></i></a>
-                                            
-                            <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$producto['id_producto']) ?>" 
-                            id = "deleteProducto<?=$producto['id_producto']?>">
-                                <input type = "hidden" name = "_method" value = "DELETE">
-                                <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$producto['id_producto']?>')" 
-                                class="btn btn-sm btn-danger" title="Eliminar">Eliminar Producto<i class="bi bi-trash"></i></a>
-                            </form>
-                        <?php }else ?>   
-                            <h2> </h2> 
+ 
     
                     </div>
 
