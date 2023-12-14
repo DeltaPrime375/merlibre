@@ -6,14 +6,12 @@ use App\Controllers\BaseController;
 
 class ProductController extends BaseController
 {
-    protected $ProductModel;
-    protected $usuariosModel;
+    protected $productModel;
 
     public function __construct(){
         helper(['form', 'url', 'session']);
         $this->session = \Config\Services::session();
         $this->ProductModel = model('ProductModel'); 
-        $this->usuariosModel = model('UsuariosModel'); 
     }
 
     public function index()

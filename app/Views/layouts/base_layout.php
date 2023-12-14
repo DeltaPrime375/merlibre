@@ -147,24 +147,11 @@ th, td {
       <button type="submit">Buscar</button>
     </form>
     </a>
-<!--
-    <a href="<?= base_url('usuarios')?>">Usuarios</a>
 
-
-    <a href="<?= base_url('usuarios/new')?>">Creá tu cuenta</a>
-    <a href="<?= base_url('usuarios/login')?>">Ingresá</a>
-
-
-    <a href="<?= base_url('productos/new')?>">Vender</a>
-
-    <a href="<?= base_url('historial')?>">Mis Compras</a>
-    
-    <a href="<?= base_url('carrito')?>">Carrito</a>
-
-  -->
   <?php 
         if ( $_SESSION['Usuario'] != 0 ){
           ?>
+          
             <a href="<?= base_url('usuarios')?>"><?php echo '<h5> <FONT COLOR="black"> '.$_SESSION['Nombre'].'</FONT></h5>'?></a>
             <a href="<?= base_url('productos/new')?>"><?php echo '<h5> <FONT COLOR="black"> Vender</FONT></h5>'?></a>
             <a href="<?= base_url('compras')?>"><?php echo '<h5> <FONT COLOR="black"> Mis Compras</FONT></h5>'?></a>

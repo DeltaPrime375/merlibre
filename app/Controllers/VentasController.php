@@ -16,7 +16,7 @@ class VentasController extends ResourceController
 {
     protected $Modelocarrito;
     protected $Modelocarritodetalle;
-    protected $Modelodireccionclientes;
+    protected $Modelodireccioncliente;
     protected $Modelodiassurtido;
     protected $ventasModel;
     protected $ventasdetalleModel;
@@ -47,10 +47,31 @@ class VentasController extends ResourceController
         }
         $db = db_connect();
         $query = $db->query("SELECT * FROM ventas 
-        where id_cliente =".$ids."");        
+        where id_cliente =".$ids." order by id_venta desc");        
         $ventas= $query->getResult();
         //$ventas = $this->ventasModel->orderBy('id_venta','asc')->find($ids);
         return view('ventas/index',compact('ventas'));
+    }
+
+	/**
+     * Return the properties of a resource object
+     *
+     * @return mixed
+     */
+    public function show($id_venta = null)
+    {
+        
+        $db = db_connect();
+        $query = $db->query("SELECT ventas_detalle.id_producto, ventas_detalle.tiempo_surtido,
+                            ventas_detalle.cantidad, ventas_detalle.precio, ventas_detalle.descuento,
+                            productos.nombre_producto, ventas.fecha_venta, productos.imagen,
+                            ventas.estatus
+                            FROM ventas_detalle, productos, ventas
+                            where ventas_detalle.id_venta = ".$id_venta." 
+                            and ventas.id_venta = ventas_detalle.id_venta 
+                            and ventas_detalle.id_producto = productos.id_producto");
+        $ventas= $query->getResult();
+        return view('ventas/show',compact('ventas'));
     }
 
     /**
@@ -82,14 +103,8 @@ class VentasController extends ResourceController
     public function diallega($id = null)
     {
         //
-        //$direccionclienteModel = new ModeloDireccionClientes();
-
-        //$data = $direccionclienteModel->getWhere(['id_cliente' =>$id])->getResult();
-        //$id = $_GET["id_cliente"];
-        //select carrito_detalle.id_carrito, carrito.id_cliente, productos.tiempo_surtido from productos, carrito_detalle, carrito where productos.id_producto = carrito_detalle.ip_producto and carrito_detalle.id_carrito = carrito.id_carrito
         $data = $this->Modelodireccioncliente->find($id);
         $carrito = $this->Modelocarrito->find($id);
-        //$diassur = $this->Modelodiassurtido->find($id);
         $db = db_connect();
         $query = $db->query("SELECT carrito.id_cliente, productos.tiempo_surtido FROM carrito, productos, carrito_detalle 
         where carrito.id_cliente = ".$id." and carrito.id_carrito = carrito_detalle.id_carrito and
@@ -97,7 +112,6 @@ class VentasController extends ResourceController
         $diassur= $query->getResult();
 
         if($data and $carrito and $diassur){
-            //return $this->respond($data);
             return view('ventas/diallega',compact('data','carrito','diassur'));
         }else{
             return $this->failNotFound("La direccion del cliente con el identificador ".$id." no fue encontrado");
@@ -267,10 +281,8 @@ class VentasController extends ResourceController
         // eliminar los datos del carrito
         $this->Modelocarrito->delete($id);
         $this->Modelocarritodetalle->delete($id_carrito);
-        //session()->setFlashdata('success', 'Se elimino el producto');
 
         if($data and $carrito){
-            //return $this->respond($data);
             return view('ventas/revisayconfirma',compact('data','carrito'));
         }else{
             return $this->failNotFound("La direccion del cliente con el identificador ".$id." no fue encontrado");
@@ -322,8 +334,12 @@ class VentasController extends ResourceController
      *
      * @return mixed
      */
-    public function delete($id = null)
+    public function delete($id_venta = null)
     {
         //
+		$this->ventasModel->delete($id_venta);
+        $this->ventasdetalleModel->delete($id_venta);
+        session()->setFlashdata('success', 'Se elimino la venta');
+        return redirect()->to(site_url('/compras'));
     }
 }

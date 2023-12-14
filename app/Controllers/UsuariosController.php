@@ -6,26 +6,30 @@ use App\Controllers\BaseController;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\UsuariosModel;
 use App\Models\ProductModel;
+use App\Models\DireccionModel;
 
 class UsuariosController extends BaseController
 {
-    protected $UsuariosModel;
+    protected $usuariosModel;
     protected $ProductModel;
+    protected $direccionModel;
 
     public function __construct(){
         helper(['form', 'url', 'session']);
         $this->session = \Config\Services::Session();
         $this->usuariosModel = model('UsuariosModel'); 
         $this->ProductModel = model('ProductModel'); 
+        $this->direccionModel = model('DireccionModel'); 	
     }
 
     public function index()
     {
-        $id_usuario=$_SESSION['Usuario'];
+        $usuario=$_SESSION['Usuario'];
+        $usuariosModel = new UsuariosModel();
         //$usuariosModel = new UsuariosModel();
         //$usuarios = $this->UsuariosModel->orderBy('id_usuario','asc')->findAll();
         //$usuarios = $this->UsuariosModel->find($id_usuario);
-        $usuarios = $usuariosModel->getWhere(['id_usuario' => $id_usuario])->getResult();
+        $usuarios = $usuariosModel->getWhere(['id_usuario' => $usuario])->getResult();
         return view('usuarios/index',compact('usuarios'));
     }
 
@@ -35,6 +39,17 @@ class UsuariosController extends BaseController
 
         if($usuarios){
             return view('usuarios/show',compact('usuarios'));
+        }else{
+            return redirect()->to(site_url('/usuarios'));
+        }
+    }
+
+    public function showdir($id_usuario = null)
+    {
+        $direccion_clientes = $this->direccionModel->find($id_usuario);
+
+        if($direccion_clientes){
+            return view('usuarios/showdir',compact('direccion_clientes'));
         }else{
             return redirect()->to(site_url('/usuarios'));
         }
@@ -58,6 +73,9 @@ class UsuariosController extends BaseController
             'contraseña' => $this->request->getVar('contraseña'),
         ]);
 
+        $id_usuario = $this->usuariosModel->getInsertID();
+        $_SESSION['Usuario'] = $id_usuario;
+        $_SESSION['Nombre'] = $this->request->getVar('nombre_usuario')." ".$this->request->getVar('apellido_paterno'). " ".$this->request->getVar('apellido_materno');
         session()->setFlashdata('success', 'Se agrego un nuevo cliente');
         return redirect()->to(site_url('/usuarios'));
     }
@@ -68,6 +86,19 @@ class UsuariosController extends BaseController
 
         if($usuarios){
             return view('usuarios/edit', compact('usuarios'));
+        }else{
+            session()->setFlashdata('failed', 'usuario no encontrado');
+            return redirect()->to('/usuarios');
+        }
+       
+    }
+
+    public function editdir($id_usuario = null)
+    {
+        $direccion_clientes = $this->direccionModel->find($id_usuario);
+
+        if($direccion_clientes){
+            return view('usuarios/editdir', compact('direccion_clientes'));
         }else{
             session()->setFlashdata('failed', 'usuario no encontrado');
             return redirect()->to('/usuarios');
@@ -97,8 +128,9 @@ class UsuariosController extends BaseController
     {
         echo "usuario: ".$id_usuario;
         $this->usuariosModel->delete($id_usuario);
+        $this->direccionModel->delete($id_usuario);
         session()->setFlashdata('success', 'Se elimino el usuario correctamente');
-        return redirect()->to(base_url('/usuarios'));
+        return redirect()->to(base_url('/'));
     }
 
     public function newdir($id_usuario = null)
@@ -116,7 +148,7 @@ class UsuariosController extends BaseController
 
     public function createdir($id_usuario = null)
     {
-        $this->DireccionModel->save([ //crear DireccionModel
+        $this->direccionModel->insert([ //crear DireccionModel
             'id_usuario' => $id_usuario,
             'calle' => $this->request->getVar('calle'),
             'numero' => $this->request->getVar('numero'),
@@ -129,9 +161,29 @@ class UsuariosController extends BaseController
             'detalles_domicilio' => $this->request->getVar('detalles_domicilio'),
         ]);
 
-        session()->setFlashdata('success', 'Se agrego un nuevo cliente');
+        session()->setFlashdata('success', 'Se agrego el domicilio correctamente');
         return redirect()->to(site_url('/usuarios'));
     }
+
+    public function updatedir($id_usuario = null)
+    {
+        $this->direccionModel->save([
+            'id_usuario'  => $this->request->getVar('id_usuario'),
+            'calle' => $this->request->getVar('calle'),
+            'numero' => $this->request->getVar('numero'),
+            'colonia' => $this->request->getVar('colonia'),
+            'ciudad' => $this->request->getVar('ciudad'),
+            'estado' => $this->request->getVar('estado'),
+            'pais' => $this->request->getVar('pais'),
+            'CP' => $this->request->getVar('CP'),
+            'telefono' => $this->request->getVar('telefono'),
+            'detalles_domicilio' => $this->request->getVar('detalles_domicilio'),
+        ]);
+
+        session()->setFlashdata('success', 'Se actualizo correctamente');
+        return redirect()->to(site_url('/usuarios'));
+    }
+
     public function inicio()
     {
         $Correo = $this->request->getVar('correo_electronico');
@@ -168,95 +220,4 @@ class UsuariosController extends BaseController
     {
         return view('usuarios/login');
     }
-    /*
-    protected $userModel;
-
-    public function __construct(){
-        helper(['form', 'url', 'session']);
-        $this->session = \Config\Services::session();
-        $this->UserModel = model('UserModel'); 
-    }
-
-    public function index()
-    {
-        $usuarios = $this->UserModel->orderBy('id_usuario','asc')->findall();
-        return view('usuarios/index',compact('usuarios'));
-    }
-
-    public function show($id_usuario = null)
-    {
-        $usuario = $this->UserModel->find($id_usuario);
-
-        if($usuario){
-            return view('usuarios/show',compact('usuario'));
-        }else{
-            return redirect()->to(site_url('/usuarios'));
-        }
-    }
-
-    public function new()
-    {
-        return view('usuarios/new');
-    }
-
-    public function create()
-    {
-        $this->UserModel->save([
-            'nombre_usuario' => $this->request->getVar('nombre_usuario'),
-            'apellido_paterno' => $this->request->getVar('apellido_paterno'),
-            'apellido_materno' => $this->request->getVar('apellido_materno'),
-            'apodo_usuario' => $this->request->getVar('apodo_usuario'),
-            'correo_electronico' => $this->request->getVar('correo_electronico'),
-            'telefono' => $this->request->getVar('telefono'), 
-            'RFC' => $this->request->getVar('RFC'),
-            'contraseña' => $this->request->getVar('contraseña')
-        ]);
-
-        session()->setFlashdata('success', 'Se agrego un nuevo usuario');
-        return redirect()->to(site_url('/usuarios'));
-    }
-    
-    public function edit($id_usuario = null)
-    {
-        $usuario = $this->UserModel->find($id_usuario);
-
-        if($usuario){
-            return view('usuarios/edit', compact('usuario'));
-        }else{
-            session()->setFlashdata('failed', 'Usuario no encontrado');
-            return redirect()->to('/usuarios');
-        }
-       
-    }
-
-    public function update($id_usuario = null)
-    {
-        $this->UserModel->save([
-            'id_usuario' => $id_usuario,
-            'nombre_usuario' => $this->request->getVar('nombre_usuario'),
-            'apellido_paterno' => $this->request->getVar('apellido_paterno'),
-            'apellido_materno' => $this->request->getVar('apellido_materno'),
-            'apodo_usuario' => $this->request->getVar('apodo_usuario'),
-            'correo_electronico' => $this->request->getVar('correo_electronico'),
-            'telefono' => $this->request->getVar('telefono'), 
-            'RFC' => $this->request->getVar('RFC'),
-            'contraseña' => $this->request->getVar('contraseña')
-        ]);
-
-        session()->setFlashdata('success', 'Se actualizaron los valores del usuario');
-        return redirect()->to(site_url('/usuarios'));
-    }
-    
-    public function delete($id_usuario = null)
-    {
-        $this->UserModel->delete($id_usuario);
-        session()->setFlashdata('success', 'Se elimino el usuario');
-        return redirect()->to(site_url('/usuarios'));
-    }
-
-    public function login()
-    {
-        return view('usuarios/login');
-    }
-    */
 }
