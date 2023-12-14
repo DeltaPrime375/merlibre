@@ -14,10 +14,11 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
+
                     <div class="col-md-6"><img img class="card-img-top" src=<?php echo trim($producto['imagen'])?> alt="..." /></div>
                     <div class="col-md-6">
-                        <div class="small mb-1"><?php echo trim($producto['nuevo_usado'])?></div>
-                        <!--<div class="small mb-1">ID del Producto: <?php echo trim($producto['id_producto'])?></div>-->
+                        <div class="small mb-1">ID: <?php echo trim($producto['id_producto'])?></div>
+                        <div class="mb-1"><?php echo trim($producto['nuevo_usado'])?></div>
                         <h1 class="display-5 fw-bolder"><?php echo trim($producto['nombre_producto'])?></h1>
                         <div class="fs-5 mb-5">
                             
@@ -48,15 +49,15 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                     
                                 <?php endif?> 
                             </span>
-
-                            <button class="btn btn-primary" type="button">
-                                Comprar ahora
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                            <i class="bi-cart-fill me-1"></i>
-                                Agregar al carrito
-                            </button>
-
+                                
+                                    <button class="btn btn-primary" type="button">
+                                        Comprar ahora
+                                    </button>
+                                    <button class="btn btn-secondary" type="button">
+                                    <i class="bi-cart-fill me-1"></i>
+                                        Agregar al carrito
+                                    </button>
+                                
                             <?php else: ?>
                                 <div class="small mb-1">Este producto no está disponible por el momento</div>
                             <?php endif?>    
@@ -69,19 +70,23 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 
                         <br><div class="small">Se entrega en <?php echo trim($producto['tiempo_surtido'])?> dias</div>
                         <div class="small">Marca: <?php echo trim($producto['marca'])?></div>
-                        <div class="small">Vendido por: </div><br>
+                        <div class="small">Vendido por: Vendedor <?php echo trim($producto['id_proveedor'])?></div><br>
                         <p class="lead descripcion"><?php echo trim($producto['descripcion_general'])?></p>
-
-                        <a href = "<?= base_url('productos/edit/'.$producto['id_producto'])?>" class = "btn btn-sm btn-success mx-1" title = "Editar">Editar Producto<i class = "bi bi-pencil-square"></i></a>
+                        
+                        <?php if ( $_SESSION['Usuario'] == $producto['id_proveedor'] ){ ?>
+                            <a href = "<?= base_url('productos/edit/'.$producto['id_producto'])?>" class = "btn btn-sm btn-success mx-1" title = "Editar">Editar Producto<i class = "bi bi-pencil-square"></i></a>
                                             
-                        <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$producto['id_producto']) ?>" 
-                        id = "deleteProducto<?=$producto['id_producto']?>">
-                            <input type = "hidden" name = "_method" value = "DELETE">
-                            <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$producto['id_producto']?>')" 
-                            class="btn btn-sm btn-danger" title="Eliminar">Eliminar Producto<i class="bi bi-trash"></i></a>
-                        </form>
-
+                            <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$producto['id_producto']) ?>" 
+                            id = "deleteProducto<?=$producto['id_producto']?>">
+                                <input type = "hidden" name = "_method" value = "DELETE">
+                                <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$producto['id_producto']?>')" 
+                                class="btn btn-sm btn-danger" title="Eliminar">Eliminar Producto<i class="bi bi-trash"></i></a>
+                            </form>
+                        <?php }else ?>   
+                            <h2> </h2> 
+    
                     </div>
+
                 </div>
             </div>
         </section>

@@ -24,6 +24,7 @@ $routes->get('productos','ProductController::index'); //Obtener productos regist
 $routes->get('productos/new','ProductController::new'); //Cargar vista para registrar un nuevo producto
 $routes->post('productos','ProductController::create'); //Crear un nuevo producto
 $routes->get('productos/(:num)','ProductController::show/$1'); //Mostrar datos de un producto
+$routes->get('productos/(:num)','ProductController::show_proveedor/$1'); //Mostrar datos de un producto
 $routes->get('productos/edit/(:num)','ProductController::edit/$1'); //Cargar vista para modificar datos de un producto
 $routes->put('productos/(:num)','ProductController::update/$1'); //Modificar los datos de un producto
 $routes->delete('productos/(:num)','ProductController::delete/$1'); //Eliminar un producto

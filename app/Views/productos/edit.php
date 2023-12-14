@@ -20,6 +20,9 @@ $this->section('title')?> Modificar datos de un producto <?= $this->endSection()
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Proveedor</label>
                                             <input type = "text" class = "form-control" disabled placeholder = "ID del usuario" value = "<?php echo trim($producto['id_proveedor'])?>"/>
+                                            
+                                            <input type = "hidden" class = "form-control" name = "id_proveedor" 
+                                             value = "<?php if($producto['id_proveedor']): echo $producto['id_proveedor']; else: sett_value('id_proveedor'); endif;?>"/>
                                         </div>
 
                                         <div class = "form-group mb-3">
