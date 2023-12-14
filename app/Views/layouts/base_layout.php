@@ -173,7 +173,7 @@ th, td {
             <a href="<?= base_url('compras')?>"><?php echo '<h5> <FONT COLOR="black"> Mis Compras</FONT></h5>'?></a>
             <a href="<?= base_url('carrito')?>"><?php echo '<h5> <FONT COLOR="black"> Carrito</FONT></h5>'?></a>
             <a href="<?= base_url('ventas/domicilio/'.$_SESSION['Usuario'])?>"><?php echo '<h5> <FONT COLOR="black"> Pagar</FONT></h5>'?></a>
-            <a href="<?= base_url('/')?>">Salir</a>
+            <a href="<?= base_url('/')?>"><h5><FONT COLOR="black">Salir</FONT></h5></a>
             <br>
           <?php 
         }else {
