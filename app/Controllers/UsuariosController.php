@@ -10,32 +10,32 @@ use App\Models\DireccionModel;
 
 class UsuariosController extends BaseController
 {
-    protected $usuariosModel;
+    protected $UsuariosModel;
     protected $ProductModel;
-    protected $direccionModel;
+    protected $DireccionModel;
 
     public function __construct(){
         helper(['form', 'url', 'session']);
         $this->session = \Config\Services::Session();
-        $this->usuariosModel = model('UsuariosModel'); 
+        $this->UsuariosModel = model('UsuariosModel'); 
         $this->ProductModel = model('ProductModel'); 
-        $this->direccionModel = model('DireccionModel'); 	
+        $this->DireccionModel = model('DireccionModel'); 	
     }
 
     public function index()
     {
         $usuario=$_SESSION['Usuario'];
-        $usuariosModel = new UsuariosModel();
+        $UsuariosModel = new UsuariosModel();
         //$usuariosModel = new UsuariosModel();
         //$usuarios = $this->UsuariosModel->orderBy('id_usuario','asc')->findAll();
         //$usuarios = $this->UsuariosModel->find($id_usuario);
-        $usuarios = $usuariosModel->getWhere(['id_usuario' => $usuario])->getResult();
+        $usuarios = $UsuariosModel->getWhere(['id_usuario' => $usuario])->getResult();
         return view('usuarios/index',compact('usuarios'));
     }
 
     public function show($id_usuario = null)
     {
-        $usuarios = $this->usuariosModel->find($id_usuario);
+        $usuarios = $this->UsuariosModel->find($id_usuario);
 
         if($usuarios){
             return view('usuarios/show',compact('usuarios'));
@@ -46,7 +46,7 @@ class UsuariosController extends BaseController
 
     public function showdir($id_usuario = null)
     {
-        $direccion_clientes = $this->direccionModel->find($id_usuario);
+        $direccion_clientes = $this->DireccionModel->find($id_usuario);
 
         if($direccion_clientes){
             return view('usuarios/showdir',compact('direccion_clientes'));
@@ -62,7 +62,7 @@ class UsuariosController extends BaseController
 
     public function create()
     {
-        $this->usuariosModel->insert([
+        $this->UsuariosModel->insert([
             'nombre_usuario' => $this->request->getVar('nombre_usuario'),
             'apellido_paterno' => $this->request->getVar('apellido_paterno'),
             'apellido_materno' => $this->request->getVar('apellido_materno'),
@@ -73,7 +73,7 @@ class UsuariosController extends BaseController
             'contraseña' => $this->request->getVar('contraseña'),
         ]);
 
-        $id_usuario = $this->usuariosModel->getInsertID();
+        $id_usuario = $this->UsuariosModel->getInsertID();
         $_SESSION['Usuario'] = $id_usuario;
         $_SESSION['Nombre'] = $this->request->getVar('nombre_usuario')." ".$this->request->getVar('apellido_paterno'). " ".$this->request->getVar('apellido_materno');
         session()->setFlashdata('success', 'Se agrego un nuevo cliente');
@@ -82,7 +82,7 @@ class UsuariosController extends BaseController
     
     public function edit($id_usuario = null)
     {
-        $usuarios = $this->usuariosModel->find($id_usuario);
+        $usuarios = $this->UsuariosModel->find($id_usuario);
 
         if($usuarios){
             return view('usuarios/edit', compact('usuarios'));
@@ -95,7 +95,7 @@ class UsuariosController extends BaseController
 
     public function editdir($id_usuario = null)
     {
-        $direccion_clientes = $this->direccionModel->find($id_usuario);
+        $direccion_clientes = $this->DireccionModel->find($id_usuario);
 
         if($direccion_clientes){
             return view('usuarios/editdir', compact('direccion_clientes'));
@@ -108,7 +108,7 @@ class UsuariosController extends BaseController
 
     public function update($id_usuario = null)
     {
-        $this->usuariosModel->save([
+        $this->UsuariosModel->save([
             'id_usuario' => $id_usuario,
             'nombre_usuario' => $this->request->getVar('nombre_usuario'),
             'apellido_paterno' => $this->request->getVar('apellido_paterno'),
@@ -127,15 +127,15 @@ class UsuariosController extends BaseController
     public function delete($id_usuario = null)
     {
         echo "usuario: ".$id_usuario;
-        $this->usuariosModel->delete($id_usuario);
-        $this->direccionModel->delete($id_usuario);
+        $this->UsuariosModel->delete($id_usuario);
+        $this->DireccionModel->delete($id_usuario);
         session()->setFlashdata('success', 'Se elimino el usuario correctamente');
         return redirect()->to(base_url('/'));
     }
 
     public function newdir($id_usuario = null)
     {
-        $usuarios = $this->usuariosModel->find($id_usuario);
+        $usuarios = $this->UsuariosModel->find($id_usuario);
 
         if($usuarios){
             return view('usuarios/newdir', compact('usuarios'));

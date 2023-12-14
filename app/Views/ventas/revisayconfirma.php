@@ -85,7 +85,7 @@ $Ado=date("Y");
 
 											echo	'<h1 class="noPrint">			
 													<div style="position: absolute;top: 30px;left: 800px;">';?>
-											<form action = "<?=base_url('ventas/'.$carrito['id_cliente'])?>" method = "GET"> 
+											<form action = "<?=base_url('compras')?>" method = "GET"> 
 											<?php
 												echo '<button type = "submit" class="noPrint" >Terminar</button>';
 												echo '</form>

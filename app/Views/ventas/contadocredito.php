@@ -29,7 +29,7 @@ $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
                 <form action = "<?=base_url('ventas/efectivopuntopago/'.$carrito['id_cliente'])?>" method = "GET"> 
 
                     <div>
-                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="1"> 
+                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="1" disabled> 
                         <label> <h6> &nbsp &nbsp Mercado Credito </h6>   </label>  <br>
                         <label> &nbsp &nbsp &nbsp &nbsp  Hasta 12 mensualidades sin usar tarjeta</label>
                     </div>
@@ -37,14 +37,14 @@ $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
                         <?php echo "&nbsp";?>
                     </div>
                     <div>
-                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="8"> 
+                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="8" disabled> 
                         <label> <h6> &nbsp &nbsp Nueva tarjeta de credito </h6>   </label>  <br>                        
                     </div>
                     <div>
                         <?php echo "&nbsp";?>
                     </div>
                     <div>
-                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="9"> 
+                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="9"  disabled> 
                         <label> <h6> &nbsp &nbsp Nueva tarjeta de debito </h6>   </label>  <br>                        
                     </div>
                     <div>
@@ -55,7 +55,7 @@ $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
                         <?php echo "&nbsp";?>
                     </div>
                     <div>
-                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="10"> 
+                        <input type="radio" required name="MercadoPago" id="MercadoPago" value="10" disabled> 
                         <label> <h6> &nbsp &nbsp Transferencia SPEI </h6>   </label>  <br>
                         <label> &nbsp &nbsp &nbsp &nbsp  Desde cualquier banca en linea</label>
                     </div>

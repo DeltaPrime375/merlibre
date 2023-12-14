@@ -80,14 +80,14 @@ $this->section('title')?> Compras realizadas <?= $this->endSection()?>
 
 
                                         <td class = "d-flex">
-                                            <a href = "<?= base_url('ventas/show/'.$vta->id_venta)?>" class = "btn btn-sm btn-info mx-1" title = "Mostrar"><i class = "bi bi-info-square"></i></a>
+                                            <a href = "<?= base_url('compras/show/'.$vta->id_venta)?>" class = "btn btn-sm btn-info mx-1" title = "Mostrar"><i class = "bi bi-info-square"></i></a>
                                         <?php   
                                         if ($Permite_borrar == 1) {
                                             ?>
-                                            <form class = "display-none" method = "post" action = "<?=base_url('productos/'.$vta->id_cliente) ?>" 
-                                                id = "deleteProducto<?=$vta->id_cliente?>">
+                                            <form class = "display-none" method = "post" action = "<?=base_url('ventas/'.$vta->id_venta) ?>" 
+                                                id = "deleteVenta<?=$vta->id_venta?>">
                                                 <input type = "hidden" name = "_method" value = "DELETE"/>
-                                                <a href = "javascript:void(0)" onclick = "deleteProducto('deleteProducto<?=$vta->id_cliente?>')" 
+                                                <a href = "javascript:void(0)" onclick = "deleteVenta('deleteVenta<?=$vta->id_venta?>')" 
                                                 class="btn btn-sm btn-danger" title="Eliminar"><i class="bi bi-trash"></i></a>
                                             </form>
                                             <?php
@@ -113,8 +113,8 @@ $this->section('title')?> Compras realizadas <?= $this->endSection()?>
     </div>
 
     <script>
-        function deleteProducto(formId){
-            let confirm = window.confirm('¿Está seguro que desea eliminar este producto');
+        function deleteVenta(formId){
+            let confirm = window.confirm('¿Está seguro que desea eliminar esta venta');
             if(confirm){
                 document.getElementById(formId).submit();
             }
