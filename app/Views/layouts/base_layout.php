@@ -138,8 +138,22 @@ th, td {
 }
 </style>
 <header class="header">
-  <a href="/" class="logo">Mercado Libre</a>
+
+
+  <?php 
+        if ( $_SESSION['Usuario'] != 0 ){
+          ?>
+            <a href="<?= base_url('productos')?>" class="logo">Mercado Libre</a>
   <div class="header-right">
+          <?php 
+        }else {
+          ?>
+              <a href="/" class="logo">Mercado Libre</a>
+  <div class="header-right">
+          <?php 
+
+        }
+      ?>
 
   <a>
     <form action="<?= base_url('productos/search')?>">
@@ -148,6 +162,8 @@ th, td {
     </form>
     </a>
 
+  
+    
   <?php 
         if ( $_SESSION['Usuario'] != 0 ){
           ?>
@@ -157,6 +173,7 @@ th, td {
             <a href="<?= base_url('compras')?>"><?php echo '<h5> <FONT COLOR="black"> Mis Compras</FONT></h5>'?></a>
             <a href="<?= base_url('carrito')?>"><?php echo '<h5> <FONT COLOR="black"> Carrito</FONT></h5>'?></a>
             <a href="<?= base_url('ventas/domicilio/'.$_SESSION['Usuario'])?>"><?php echo '<h5> <FONT COLOR="black"> Pagar</FONT></h5>'?></a>
+            <a href="<?= base_url('/')?>">Salir</a>
             <br>
           <?php 
         }else {
@@ -168,6 +185,7 @@ th, td {
             <a href="<?= base_url('usuarios/login')?>">Mis Compras</a>
             <a href="<?= base_url('usuarios/login')?>">Carrito</a>
             <a>Pagar</a>
+
           <?php 
 
         }
