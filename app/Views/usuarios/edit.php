@@ -55,8 +55,8 @@ $this->section('title')?> Modificar datos de un usuario <?= $this->endSection()?
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Contraseña</label>
-                                            <input type = "text" class = "form-control" name = "contraseña" placeholder = "Ingrese su contraseña" 
-                                            value = "<?php if($usuarios['contraseña']): echo $usuarios['contraseña']; else: sett_value('contraseña'); endif;?>"/>
+                                            <input type = "text" class = "form-control" name = "contrasena" placeholder = "Ingrese su contraseña" 
+                                            value = "<?php if($usuarios['contrasena']): echo $usuarios['contrasena']; else: sett_value('contrasena'); endif;?>"/>
                                         </div>
                                         
                                         <button type = "submit" class = "btn btn-success">Modificar usuario</button>

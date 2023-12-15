@@ -24,7 +24,7 @@ $this->section('title')?> Inicio de sesión<?= $this->endSection()?>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Contraseña</label>
-                                            <input type = "password" class = "form-control" autocomplete = "off" name = "contraseña" placeholder = "Ingrese su contraseña"/>
+                                            <input type = "password" class = "form-control" autocomplete = "off" name = "contrasena" placeholder = "Ingrese su contraseña"/>
                                         </div>
                                         <button type = "submit" class = "btn btn-success">Iniciar sesión</button>
 

@@ -59,7 +59,7 @@ $this->section('title')?> Listado de usuarios <?= $this->endSection()?>
                                         <td><?= $usuario->correo_electronico?></td>
                                         <td><?= $usuario->telefono?></td>
                                         <td><?= $usuario->RFC?></td>
-                                        <td><?= $usuario->contraseña?></td>
+                                        <td><?= $usuario->contrasena?></td>
                                         <td class="d-flex">
                                         <a href="<?= base_url('usuarios/newdir/'.$usuario->id_usuario)?>" class="btn btn-warning" title="Agregar Domicilio"><i class="bi bi-pin-map-fill"></i></a>
                                             <a href="<?= base_url('usuarios/'.$usuario->id_usuario)?>" class="btn btn-sm btn-info mx-1" title="Mostrar Información"><i class="bi bi-info-square"></i></a>

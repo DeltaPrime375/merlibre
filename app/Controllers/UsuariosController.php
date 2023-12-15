@@ -70,7 +70,7 @@ class UsuariosController extends BaseController
             'correo_electronico' => $this->request->getVar('correo_electronico'),
             'telefono' => $this->request->getVar('telefono'),
             'RFC' => $this->request->getVar('RFC'),
-            'contraseña' => $this->request->getVar('contraseña'),
+            'contrasena' => $this->request->getVar('contrasena'),
         ]);
 
         $id_usuario = $this->UsuariosModel->getInsertID();
@@ -117,7 +117,7 @@ class UsuariosController extends BaseController
             'correo_electronico' => $this->request->getVar('correo_electronico'),
             'telefono' => $this->request->getVar('telefono'),
             'RFC' => $this->request->getVar('RFC'),
-            'contrasena' => $this->request->getVar('contraseña'),
+            'contrasena' => $this->request->getVar('contrasena'),
         ]);
 
         session()->setFlashdata('success', 'Se actualizaron los valores del usuario');
@@ -187,7 +187,7 @@ class UsuariosController extends BaseController
     public function inicio()
     {
         $Correo = $this->request->getVar('correo_electronico');
-        $Contrasena = $this->request->getVar('contraseña');
+        $Contrasena = $this->request->getVar('contrasena');
         $db = db_connect();
         $query = $db->query("SELECT * FROM usuarios");        
         $usuarios= $query->getResult();
@@ -196,7 +196,7 @@ class UsuariosController extends BaseController
         $Nombre =" ";
         foreach($usuarios as $usr){
             if ($usr->correo_electronico == $Correo) {
-                if($usr->contraseña == $Contrasena){
+                if($usr->contrasena == $Contrasena){
                     $Existe = 1;
                     $Nombre=$usr->nombre_usuario." ".$usr->apellido_paterno." ".$usr->apellido_materno;
                     $Usuario = $usr->id_usuario;

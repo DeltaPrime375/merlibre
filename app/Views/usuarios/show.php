@@ -49,7 +49,7 @@ $this->section('title')?> Detalles del Usuario <?= $this->endSection()?>
                                 </div>
                                 <div class = "form-group mb-3">
                                     <label class = "form-label">Contraseña</label>
-                                    <input type = "text" class = "form-control" disabled placeholder = "Contraseña" value = "<?php echo trim($usuarios['contraseña'])?>"/>
+                                    <input type = "text" class = "form-control" disabled placeholder = "Contraseña" value = "<?php echo trim($usuarios['contrasena'])?>"/>
                                 </div>
                             </div>
                         </div>

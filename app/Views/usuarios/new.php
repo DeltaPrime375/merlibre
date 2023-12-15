@@ -45,7 +45,7 @@ $this->section('title')?> Registrar nuevo usuario <?= $this->endSection()?>
                                         </div>
                                         <div class = "form-group mb-3">
                                             <label class = "form-label">Contraseña</label>
-                                            <input type = "text" class = "form-control" name = "contraseña" placeholder = "Ingrese su contraseña"/>
+                                            <input type = "text" class = "form-control" name = "contrasena" placeholder = "Ingrese su contraseña"/>
                                         </div>
                                         <button type = "submit" class = "btn btn-success">Guardar usuario</button>
                                     </div>
