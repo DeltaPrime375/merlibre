@@ -82,7 +82,17 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 
                         <br><div class="small">Se entrega en <?php echo trim($producto['tiempo_surtido'])?> dias</div>
                         <div class="small">Marca: <?php echo trim($producto['marca'])?></div>
-                        <div class="small">Vendido por: Vendedor <?php echo trim($producto['id_proveedor'])?></div><br>
+
+                        <div class="small">Vendido por: <?php 
+                        $db = new mysqli("localhost","root","","merlibre");
+                        $query = ("SELECT usuarios.apodo_usuario FROM usuarios where id_usuario =".$producto['id_proveedor']);
+                        
+                        $result = mysqli_query($db, $query);
+                        while($row = mysqli_fetch_array($result)) {
+                            echo $row['apodo_usuario']; 
+                        }
+                        ?></div><br>
+
                         <p class="lead descripcion"><?php echo trim($producto['descripcion_general'])?></p>
                         
  

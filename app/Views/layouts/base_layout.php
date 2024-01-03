@@ -165,15 +165,32 @@ th, td {
   
     
   <?php 
+        $db = db_connect();
+        $id = $_SESSION['Usuario'];
+        $query = $db->query("SELECT carrito.id_cliente FROM carrito where id_cliente =".$id."");
+        $carrito= $query->getResult();
+
         if ( $_SESSION['Usuario'] != 0 ){
           ?>
           
             <a href="<?= base_url('usuarios')?>"><?php echo '<h5> <FONT COLOR="black"> '.$_SESSION['Nombre'].'</FONT></h5>'?></a>
+            <a href="<?= base_url('/')?>"><h5><FONT COLOR="black">Salir</FONT></h5></a>
             <a href="<?= base_url('productos/new')?>"><?php echo '<h5> <FONT COLOR="black"> Vender</FONT></h5>'?></a>
             <a href="<?= base_url('compras')?>"><?php echo '<h5> <FONT COLOR="black"> Mis Compras</FONT></h5>'?></a>
             <a href="<?= base_url('carrito')?>"><?php echo '<h5> <FONT COLOR="black"> Carrito</FONT></h5>'?></a>
-            <a href="<?= base_url('ventas/domicilio/'.$_SESSION['Usuario'])?>"><?php echo '<h5> <FONT COLOR="black"> Pagar</FONT></h5>'?></a>
-            <a href="<?= base_url('/')?>"><h5><FONT COLOR="black">Salir</FONT></h5></a>
+            
+            <?php if (count($carrito) > 0){
+              ?>
+                <a href="<?= base_url('ventas/domicilio/'.$_SESSION['Usuario'])?>"><?php echo '<h5> <FONT COLOR="black"> Pagar</FONT></h5>'?></a>
+              <?php
+            }else{
+              ?>
+                <a>Pagar</a>
+              <?php
+            }
+            ?>
+            
+            
             <br>
           <?php 
         }else {
