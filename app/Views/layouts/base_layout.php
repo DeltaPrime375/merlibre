@@ -167,7 +167,7 @@ th, td {
   <?php 
         $db = db_connect();
         $id = $_SESSION['Usuario'];
-        $query = $db->query("SELECT carrito.id_cliente FROM carrito where id_cliente =".$id."");
+        $query = $db->query("SELECT carrito.id_usuario FROM carrito where id_usuario =".$id."");
         $carrito= $query->getResult();
 
         if ( $_SESSION['Usuario'] != 0 ){

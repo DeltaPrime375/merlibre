@@ -44,6 +44,11 @@ $this->section('title')?> Registrar nuevo usuario <?= $this->endSection()?>
                                             Ingrese la Colonia" value = "<?php if($direccion_clientes['colonia']): echo $direccion_clientes['colonia']; else: sett_value('colonia'); endif;?>"/>
                                         </div>
                                         <div class = "form-group mb-3">
+                                            <label class = "form-label">Ciudad</label>
+                                            <input type = "text" class = "form-control" name = "ciudad" placeholder = "
+                                            Ingrese el Estado" value = "<?php if($direccion_clientes['ciudad']): echo $direccion_clientes['ciudad']; else: sett_value('ciudad'); endif;?>"/>
+                                        </div>
+                                        <div class = "form-group mb-3">
                                             <label class = "form-label">Estado</label>
                                             <input type = "text" class = "form-control" name = "estado" placeholder = "
                                             Ingrese el Estado" value = "<?php if($direccion_clientes['estado']): echo $direccion_clientes['estado']; else: sett_value('estado'); endif;?>"/>

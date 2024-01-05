@@ -8,7 +8,7 @@ class DireccionClientesModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'direccion_clientes';
-    protected $primaryKey       = 'id_cliente';
+    protected $primaryKey       = 'id_usuario';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
