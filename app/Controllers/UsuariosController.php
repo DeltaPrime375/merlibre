@@ -148,7 +148,7 @@ class UsuariosController extends BaseController
 
     public function createdir($id_usuario = null)
     {
-        $this->direccionModel->insert([ //crear DireccionModel
+        $this->DireccionModel->insert([ //crear DireccionModel
             'id_usuario' => $id_usuario,
             'calle' => $this->request->getVar('calle'),
             'numero' => $this->request->getVar('numero'),
@@ -167,7 +167,7 @@ class UsuariosController extends BaseController
 
     public function updatedir($id_usuario = null)
     {
-        $this->direccionModel->save([
+        $this->DireccionModel->save([
             'id_usuario'  => $this->request->getVar('id_usuario'),
             'calle' => $this->request->getVar('calle'),
             'numero' => $this->request->getVar('numero'),

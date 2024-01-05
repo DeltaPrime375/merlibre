@@ -201,7 +201,6 @@ th, td {
             <a href="<?= base_url('usuarios/login')?>">Vender</a>
             <a href="<?= base_url('usuarios/login')?>">Mis Compras</a>
             <a href="<?= base_url('usuarios/login')?>">Carrito</a>
-            <a>Pagar</a>
 
           <?php 
 

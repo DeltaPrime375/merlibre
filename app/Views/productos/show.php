@@ -65,10 +65,13 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                     <button class="btn btn-primary" type="button">
                                         Comprar ahora
                                     </button>
+
+
                                     <button class="btn btn-secondary" type="button">
                                     <i class="bi-cart-fill me-1"></i>
                                         Agregar al carrito
                                     </button>
+                                    
                                 
                             <?php else: ?>
                                 <div class="small mb-1">Este producto no está disponible por el momento</div>
