@@ -106,9 +106,9 @@ class VentasController extends ResourceController
         $data = $this->Modelodireccioncliente->find($id);
         $carrito = $this->Modelocarrito->find($id);
         $db = db_connect();
-        $query = $db->query("SELECT carrito.id_cliente, productos.tiempo_surtido FROM carrito, productos, carrito_detalle 
-        where carrito.id_cliente = ".$id." and carrito.id_carrito = carrito_detalle.id_carrito and
-        carrito_detalle.id_producto = productos.id_producto group by carrito.id_cliente, productos.tiempo_surtido");
+        $query = $db->query("SELECT carrito.id_usuario, productos.tiempo_surtido FROM carrito, productos, carrito_detalle 
+        where carrito.id_usuario = ".$id." and carrito.id_carrito = carrito_detalle.id_carrito and
+        carrito_detalle.id_producto = productos.id_producto group by carrito.id_usuario, productos.tiempo_surtido");
         $diassur= $query->getResult();
 
         if($data and $carrito and $diassur){
@@ -129,9 +129,9 @@ class VentasController extends ResourceController
         $carrito = $this->Modelocarrito->find($id);
         
         $db = db_connect();
-        $query = $db->query("SELECT carrito.id_cliente, productos.tiempo_surtido FROM carrito, productos, carrito_detalle 
-        where carrito.id_cliente = ".$id." and carrito.id_carrito = carrito_detalle.id_carrito and
-        carrito_detalle.id_producto = productos.id_producto group by carrito.id_cliente, productos.tiempo_surtido");
+        $query = $db->query("SELECT carrito.id_usuario, productos.tiempo_surtido FROM carrito, productos, carrito_detalle 
+        where carrito.id_usuario = ".$id." and carrito.id_carrito = carrito_detalle.id_carrito and
+        carrito_detalle.id_producto = productos.id_producto group by carrito.id_usuario, productos.tiempo_surtido");
         $diassur= $query->getResult();
 
         if($data and $carrito and $diassur){
@@ -177,12 +177,12 @@ class VentasController extends ResourceController
 
         // Obtener el tiempo de surtido del los productos que el cliente comprara
         $db = db_connect();
-        $query = $db->query("SELECT carrito.id_cliente, productos.tiempo_surtido 
+        $query = $db->query("SELECT carrito.id_usuario, productos.tiempo_surtido 
                             FROM carrito, productos, carrito_detalle 
-                            where carrito.id_cliente = ".$id." 
+                            where carrito.id_usuario = ".$id." 
                             and carrito.id_carrito = carrito_detalle.id_carrito 
                             and carrito_detalle.id_producto = productos.id_producto 
-                            group by carrito.id_cliente, productos.tiempo_surtido");
+                            group by carrito.id_usuario, productos.tiempo_surtido");
         $diassur= $query->getResult();
 
         // Obtener los productos del carrito

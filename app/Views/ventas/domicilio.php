@@ -9,7 +9,7 @@ Sistema	:   Ventas por internet (Mercado Libre)
 *** Seleccionar donde se entregaran los productos                                               ***
 ***************************************************************************************************
 -->
-<?= $this->extend('layouts/base_layout2');
+<?= $this->extend('layouts/base_layout');
 $this->section('title')?> Donde entregar los productos <?= $this->endSection()?>
 <?= $this->section('content'); ?>
 
@@ -62,7 +62,7 @@ $this->section('title')?> Donde entregar los productos <?= $this->endSection()?>
         <div class="container" align="center">
             <div class="row py-4">
                 <div class="col-xl-12 text-end">
-                    <a href="<?= base_url("ventas/diallega/".$carrito['id_cliente'])?>" class="btn btn-info">Continuar</a>
+                    <a href="<?= base_url("ventas/diallega/".$carrito['id_usuario'])?>" class="btn btn-info">Continuar</a>
                     
                 </div>
             </div>

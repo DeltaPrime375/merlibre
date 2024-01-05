@@ -8,12 +8,12 @@ Sistema	:   Ventas por internet (Mercado Libre)
 *** Seleccionar el lugar para el pago en efectivo                                               ***
 ***************************************************************************************************
 -->
-<?= $this->extend('layouts/base_layout2');
+<?= $this->extend('layouts/base_layout');
 $this->section('title') ?> Seleccionar lugar de pago en efectivo <?= $this->endSection()?>
 <?= $this->section('content'); ?>
 
     <div class="card-body">
-    <form action = "<?=base_url('ventas/revisayconfirma/'.$carrito['id_cliente'])?>" method = "GET"> 
+    <form action = "<?=base_url('ventas/revisayconfirma/'.$carrito['id_usuario'])?>" method = "GET"> 
         <table class="table table-striped">
             <tr>
                 <td>
@@ -105,7 +105,7 @@ $this->section('title') ?> Seleccionar lugar de pago en efectivo <?= $this->endS
 <!--         <div class="container" align="center">
                         <div class="row py-4">
                             <div class="col-xl-12 text-end">
-                                <a href="<?= base_url("ventas/revisayconfirma/".$carrito['id_cliente'])?>" class="btn btn-info">Continuar</a>
+                                <a href="<?= base_url("ventas/revisayconfirma/".$carrito['id_usuario'])?>" class="btn btn-info">Continuar</a>
                                 
                             </div>
                         </div>

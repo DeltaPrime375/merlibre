@@ -8,12 +8,12 @@ class CarritoModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'carrito';
-    protected $primaryKey       = 'id_cliente';
+    protected $primaryKey       = 'id_usuario';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_carrito','id_cliente','cantidad_productos','importe_carrito'];
+    protected $allowedFields    = ['id_carrito','id_usuario','cantidad_productos','importe_carrito'];
 
     // Dates
     protected $useTimestamps = false;

@@ -8,7 +8,7 @@ Sistema	:   Ventas por internet (Mercado Libre)
 *** Seleccionar el medio de pago                                                                ***
 ***************************************************************************************************
 -->
-<?= $this->extend('layouts/base_layout2');
+<?= $this->extend('layouts/base_layout');
 $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
 <?= $this->section('content'); ?>
 
@@ -26,7 +26,7 @@ $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
                         <?php echo "&nbsp";?>
                     </div>
                     <!-- <form class="form-inline my-2 my-lg-0" method="POST"> -->
-                <form action = "<?=base_url('ventas/efectivopuntopago/'.$carrito['id_cliente'])?>" method = "GET"> 
+                <form action = "<?=base_url('ventas/efectivopuntopago/'.$carrito['id_usuario'])?>" method = "GET"> 
 
                     <div>
                         <input type="radio" required name="MercadoPago" id="MercadoPago" value="1" disabled> 
@@ -111,7 +111,7 @@ $this->section('title') ?> Seleccionar medio de pago <?= $this->endSection()?>
 <!--         <div class="container" align="center">
                         <div class="row py-4">
                             <div class="col-xl-12 text-end">
-                                <a href="<?= base_url("ventas/puntopago/".$carrito['id_cliente'])?>" class="btn btn-info">Continuar</a>
+                                <a href="<?= base_url("ventas/puntopago/".$carrito['id_usuario'])?>" class="btn btn-info">Continuar</a>
                                 
                             </div>
                         </div>

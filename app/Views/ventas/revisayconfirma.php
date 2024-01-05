@@ -53,7 +53,7 @@ $Ado=date("Y");
 						$Prefijo = "0500";
 					};
 	$length = 4;
-	$cliente = substr(str_repeat(0, $length).$carrito['id_cliente'], - $length);
+	$cliente = substr(str_repeat(0, $length).$carrito['id_usuario'], - $length);
 	echo 	'<div style="position: absolute;top:  50px;left: 150px;"><big> '.$dia.' de '.$fec.' de '.$Ado.'</big></div>
 													<div style="position: absolute;top:  90px;left: 50px;"><big> Paga $'.$carrito['importe_carrito'].' '.$Donde_pago.'</big></div>
 													<div style="position: absolute;top:  140px;left: 50px;"><big> Código de transacción </big></div>
