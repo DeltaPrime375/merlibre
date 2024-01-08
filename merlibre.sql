@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2023 a las 21:00:28
+-- Tiempo de generación: 08-01-2024 a las 22:29:29
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -29,17 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carrito` (
   `id_carrito` int(8) NOT NULL,
-  `id_cliente` int(4) NOT NULL,
+  `id_usuario` int(4) NOT NULL,
   `cantidad_productos` int(3) NOT NULL,
   `importe_carrito` float(8,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `carrito`
---
-
-INSERT INTO `carrito` (`id_carrito`, `id_cliente`, `cantidad_productos`, `importe_carrito`) VALUES
-(1, 2, 1, 14039.10);
 
 -- --------------------------------------------------------
 
@@ -57,13 +50,6 @@ CREATE TABLE `carrito_detalle` (
   `tiempo_surtido` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `carrito_detalle`
---
-
-INSERT INTO `carrito_detalle` (`id_carrito`, `id_producto`, `fecha_agregado`, `cantidad`, `precio`, `descuento`, `tiempo_surtido`) VALUES
-(1, 2, '2023-10-29', 1, 15599.00, 10, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -72,7 +58,7 @@ INSERT INTO `carrito_detalle` (`id_carrito`, `id_producto`, `fecha_agregado`, `c
 
 CREATE TABLE `direccion_clientes` (
   `id_direccioncliente` int(11) NOT NULL,
-  `id_cliente` int(8) NOT NULL,
+  `id_usuario` int(8) NOT NULL,
   `calle` varchar(100) NOT NULL,
   `numero` varchar(10) NOT NULL,
   `colonia` varchar(100) NOT NULL,
@@ -88,8 +74,10 @@ CREATE TABLE `direccion_clientes` (
 -- Volcado de datos para la tabla `direccion_clientes`
 --
 
-INSERT INTO `direccion_clientes` (`id_direccioncliente`, `id_cliente`, `calle`, `numero`, `colonia`, `ciudad`, `estado`, `pais`, `CP`, `telefono`, `detalles_domicilio`) VALUES
-(1, 1, 'Media Luna', '3160', 'Agustina Ramirez', 'Culiacan Rosales', 'Sinaloa', 'México', 80028, 6677906516, 'Entre circulo del sol y eclipse, color de casa ploma');
+INSERT INTO `direccion_clientes` (`id_direccioncliente`, `id_usuario`, `calle`, `numero`, `colonia`, `ciudad`, `estado`, `pais`, `CP`, `telefono`, `detalles_domicilio`) VALUES
+(1, 1, 'Media Luna', '3160', 'Agustina Ramirez', 'Culiacan Rosales', 'Sinaloa', 'México', 80028, 6677906516, 'Entre circulo del sol y eclipse, color de casa ploma'),
+(2, 2, 'Alvaro Obregon', '1234', 'Centro', 'Culiacan ', 'Sinaloa', 'Mexico', 80000, 6672277904, 'Ayuntamiento de Culiacan'),
+(3, 3, 'Mezquital del oro', '2394', 'Toledo Corro', 'Culiacan Rosales', 'Sinaloa', 'Mexico', 80296, 6672277904, 'Casa azul, barda blanca, junto a una herreria');
 
 -- --------------------------------------------------------
 
@@ -191,18 +179,19 @@ CREATE TABLE `usuarios` (
   `correo_electronico` varchar(100) NOT NULL,
   `telefono` bigint(10) NOT NULL,
   `RFC` varchar(13) NOT NULL,
-  `contraseña` varchar(20) NOT NULL
+  `contrasena` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `apellido_paterno`, `apellido_materno`, `apodo_usuario`, `correo_electronico`, `telefono`, `RFC`, `contraseña`) VALUES
+INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `apellido_paterno`, `apellido_materno`, `apodo_usuario`, `correo_electronico`, `telefono`, `RFC`, `contrasena`) VALUES
 (1, 'Lorenzo', 'Chávez', 'Félix', 'Almacenes Zaragoza S.A. de C.V.', 'lorenzoch1971@gmail.com', 6677906516, 'AMZA8005307N5', '123'),
 (2, 'José Roman', 'Armenta', 'Valenzuela', 'Celular Movil S.A. de C.V.', 'joserarmenta@gmail.com', 6671608148, 'CEMO451013F4G', 'contraseña'),
-(3, 'Juan Francisco', 'Hernandez ', 'Felix', 'Francisco Ventas', 'fr4nk375h@gmail.com', 6672277904, 'HEFJ9711104D9', 'contraseña123'),
-(4, 'Homero', 'J', 'Simpson', 'El Baron de la Cerveza', 'dou@burns.com', 123456789, '21541', 'Bart');
+(3, 'Juan Francisco', 'Hernandez ', 'Felix', 'Francisco Venta', 'fr4nk375h@gmail.com', 6672277904, 'HEFJ9711104D9', 'contraseña123'),
+(4, 'Homero', 'J', 'Simpson', 'El Baron de la Cerveza', 'dou@burns.com', 123456789, '21541', 'Bart'),
+(5, 'Marge', 'Bubier', 'Simpson', 'La loca', 'lisa@mmm.com', 2, '2', 'lisa');
 
 -- --------------------------------------------------------
 
@@ -234,7 +223,17 @@ INSERT INTO `ventas` (`id_venta`, `id_cliente`, `num_envio`, `fecha_venta`, `hor
 (132, 2, 1, '2023-12-10', '22:46:53', 14039.10, 'q'),
 (133, 2, 2, '2023-12-10', '22:46:53', 2001.30, 'e'),
 (134, 2, 1, '2023-12-10', '22:53:54', 14039.10, 'p4'),
-(135, 2, 2, '2023-12-10', '22:53:54', 2001.30, 'p4');
+(135, 2, 2, '2023-12-10', '22:53:54', 2001.30, 'p4'),
+(136, 2, 1, '2024-01-05', '15:37:21', 0.00, 'p5'),
+(137, 2, 1, '2024-01-05', '15:37:21', 0.00, 'p5'),
+(138, 2, 1, '2024-01-05', '15:50:07', 0.00, 'p3'),
+(139, 2, 1, '2024-01-05', '15:50:07', 1005.00, 'p3'),
+(140, 2, 1, '2024-01-06', '18:15:56', 0.00, 'p5'),
+(141, 2, 1, '2024-01-06', '18:16:04', 0.00, 'p1'),
+(151, 2, 1, '2024-01-06', '18:16:38', 4703.02, 'p1'),
+(152, 2, 1, '2024-01-06', '19:32:31', 0.00, 'p5'),
+(153, 2, 1, '2024-01-06', '19:32:49', 433.50, 'p5'),
+(156, 3, 1, '2024-01-08', '14:39:13', 468.91, 'p5');
 
 -- --------------------------------------------------------
 
@@ -265,7 +264,14 @@ INSERT INTO `ventas_detalle` (`id_venta`, `id_producto`, `tiempo_surtido`, `cant
 (132, 2, 2, 1, 15599.00, 10),
 (133, 1, 3, 1, 2859.00, 30),
 (134, 2, 2, 1, 15599.00, 10),
-(135, 1, 3, 1, 2859.00, 30);
+(135, 1, 3, 1, 2859.00, 30),
+(151, 3, 7, 1, 4799.00, 2),
+(152, 10, 7, 1, 850.00, 49),
+(153, 10, 7, 1, 850.00, 49),
+(0, 7, 7, 1, 664.30, 30),
+(0, 16, 7, 2, 19.50, 90),
+(156, 7, 7, 1, 664.30, 30),
+(156, 16, 7, 2, 19.50, 90);
 
 --
 -- Índices para tablas volcadas
@@ -275,7 +281,7 @@ INSERT INTO `ventas_detalle` (`id_venta`, `id_producto`, `tiempo_surtido`, `cant
 -- Indices de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  ADD PRIMARY KEY (`id_carrito`,`id_cliente`);
+  ADD PRIMARY KEY (`id_carrito`,`id_usuario`);
 
 --
 -- Indices de la tabla `carrito_detalle`
@@ -287,7 +293,7 @@ ALTER TABLE `carrito_detalle`
 -- Indices de la tabla `direccion_clientes`
 --
 ALTER TABLE `direccion_clientes`
-  ADD PRIMARY KEY (`id_direccioncliente`,`id_cliente`) USING BTREE;
+  ADD PRIMARY KEY (`id_direccioncliente`,`id_usuario`) USING BTREE;
 
 --
 -- Indices de la tabla `direccion_proveedores`
@@ -314,9 +320,9 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- Indices de la tabla `ventas_detalle`
+-- Indices de la tabla `ventas`
 --
-ALTER TABLE `ventas_detalle`
+ALTER TABLE `ventas`
   ADD PRIMARY KEY (`id_venta`);
 
 --
@@ -327,19 +333,13 @@ ALTER TABLE `ventas_detalle`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `carrito_detalle`
---
-ALTER TABLE `carrito_detalle`
-  MODIFY `id_carrito` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_carrito` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_clientes`
 --
 ALTER TABLE `direccion_clientes`
-  MODIFY `id_direccioncliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_direccioncliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_proveedores`
@@ -363,7 +363,13 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_usuario` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `id_venta` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
