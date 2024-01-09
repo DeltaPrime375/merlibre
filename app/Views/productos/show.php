@@ -88,12 +88,23 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 
                         <div class="small">Vendido por: <?php 
                         $db = new mysqli("localhost","root","","merlibre");
+
+
                         $query = ("SELECT usuarios.apodo_usuario FROM usuarios where id_usuario =".$producto['id_proveedor']);
-                        
+                        $query2 = ("SELECT usuarios.nombre_usuario FROM usuarios where id_usuario =".$producto['id_proveedor']);
+
                         $result = mysqli_query($db, $query);
+                        $result2 = mysqli_query($db, $query2);
                         while($row = mysqli_fetch_array($result)) {
-                            echo $row['apodo_usuario']; 
+                            if ($row['apodo_usuario'] == null){
+                                while($row = mysqli_fetch_array($result2)) {
+                                        echo $row['nombre_usuario']; 
+                                }
+                            }else
+                                echo $row['apodo_usuario']; 
                         }
+
+
                         ?></div><br>
 
                         <p class="lead descripcion"><?php echo trim($producto['descripcion_general'])?></p>
