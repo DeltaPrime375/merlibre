@@ -95,6 +95,7 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
 
                         $result = mysqli_query($db, $query);
                         $result2 = mysqli_query($db, $query2);
+                        
                         while($row = mysqli_fetch_array($result)) {
                             if ($row['apodo_usuario'] == null){
                                 while($row = mysqli_fetch_array($result2)) {
