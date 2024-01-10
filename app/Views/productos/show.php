@@ -66,11 +66,45 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                         Comprar ahora
                                     </button>
 
+                                    <form action = "<?=base_url('carrito') ?>" method = "POST"> 
+                                        <?=csrf_field() ?>
+                                        <div class = "row">
+                                            <div class = "col-sm-12">
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "id_carrito" value="<?php echo "".$_SESSION['Usuario'].""?>"/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "id_producto" value="<?php echo "".$producto['id_producto'].""?>"/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "fecha_agregado" value="<?php $date = date('m/d/Y h:i:s a', time())?>" />
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "cantidad" value=inputQuantity/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "precio" value="<?php 
+                                                if($producto['descuento']>0){
+                                                    echo "".$producto['precio_producto']."";
+                                                }else
+                                                    echo "".round (trim((($producto['precio_producto'])/100)*(100-($producto['descuento']))), 2)."";
+                                                ?>
+                                            ?>"/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "descuento" value="<?php echo "".$producto['descuento'].""?>"/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "tiempo_surtido" value="<?php echo "".$producto['tiempo_surtido'].""?>" />
+                                            <div>
+                                            
+                                            
+                                            <button type = "submit" class = "btn btn-secondary bi-cart-fill me-1">Agregar al carrito</button>
 
-                                    <button class="btn btn-secondary" type="button">
-                                    <i class="bi-cart-fill me-1"></i>
-                                        Agregar al carrito
-                                    </button>
+                                            </div>
+                                        </div>
+                                    </form>
+
                                     
                                 
                             <?php else: ?>

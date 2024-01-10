@@ -3,90 +3,77 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\CartModel;
+use App\Models\CarritoModel;
+use App\Models\CarritoDetalleModel;
 
 class CartController extends ResourceController
 {
-    /**
-     * Return an array of resource objects, themselves in array format
-     *
-     * @return mixed
-     */
+
+    protected $CarritoModel;
+    protected $CarritoDetalleModel;
+
+    public function __construct(){
+        helper(['form','url','session']);
+        $this->session = \Config\Services::session();
+        $this->CarritoModel = model('CarritoModel');        
+        $this->CarritoDetalleModel = model('CarritoDetalleModel');        
+    }
+
     public function index()
     {
-        $cartModel = new CartModel();
-        $datos['carrito'] = $cartModel->findAll();
-        return $this->respond($datos);
+        $usuario=$_SESSION['Usuario'];
+        $CarritoModel = new CarritoModel();
+        $carrito = $CarritoModel->getWhere(['id_usuario' => $usuario])->getResult();
+
+        $CarritoDetalleModel = new CarritoDetalleModel();
+        $carritoDetalle = $CarritoDetalleModel->getWhere(['id_carrito' => $usuario])->getResult();
+
+        return view('carrito/index',compact('carrito')); 
     }
 
-    /**
-     * Return the properties of a resource object
-     *
-     * @return mixed
-     */
-    public function show($id = null)
-    {
-        $cartModel = new CartModel();
-        $carrito = $cartModel->getWhere(['id_carrito' => $id])->getResult();
-        if ($carrito) {
-            return $this->respond($carrito);
-        } else {
-            return $this->failNotFound('Articulo no encontrado' . $id);
-        }
-    }
 
-    /**
-     * Return a new resource object, with default properties
-     *
-     * @return mixed
-     */
     public function new()
     {
         //
     }
 
-    /**
-     * Return the editable properties of a resource object
-     *
-     * @return mixed
-     */
+    public function create()
+    {
+        $this->CarritoDetalleModel->save([
+            'id_carrito' => $this->request->getVar('id_carrito'),
+            'id_producto' => $this->request->getVar('id_producto'),
+            'fecha_agregado' => $this->request->getVar('fecha_agregado'),
+            'cantidad' => $this->request->getVar('cantidad'),
+            'precio' => $this->request->getVar('precio'),
+            'descuento' => $this->request->getVar('descuento'),
+            'tiempo_surtido' => $this->request->getVar('tiempo_surtido')
+        ]);
+
+        session()->setFlashdata('success', 'Se agrego un nuevo producto');
+        return redirect()->to(site_url('/carrito'));
+    }
+
     public function edit($id = null)
     {
         //
     }
 
-    /**
-     * Add or update a model resource, from "posted" properties
-     *
-     * @return mixed
-     */
     public function update($id = null)
     {
-        $cartModel = new CartModel();
 
-        $datosSolicitud = $this->request->getJSON();
-
-        $datosActualizar = [
-            'id_cliente' => $datosSolicitud->id_cliente,
-            'cantidad_productos' => $datosSolicitud->cantidad_productos,
-            'importe_carrito' => $datosSolicitud->importe_carrito
-        ];
-
-        $cartModel->update($id, $datosActualizar);
-
-        return $this->respondUpdated(['message' => 'Registro actualizado con éxito']);
     }
 
-    /**
-     * Delete the designated resource object from the model
-     *
-     * @return mixed
-     */
     public function delete($id = null)
     {
-        $cartModel = new CartModel();
-        $cartModel->delete($id);
+        
+        $CarritoModel = new CarritoModel();
+        $CarritoDetalleModel = new CarritoDetalleModel();
 
-        return $this->respondDeleted(['message' => 'Registro eliminado con éxito']);
+
+        $CarritoDetalleModel->delete($id);
+        $CarritoModel->delete($id);
+
+        session()->setFlashdata('success', 'Se elimino el producto');
+        return redirect()->to(site_url('/carrito'));
     }
 }

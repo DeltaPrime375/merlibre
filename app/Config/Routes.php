@@ -37,7 +37,10 @@ $routes->get('productos/search','ProductController::search_index'); //Obtener pr
 
 //Rutas carrito
 $routes->get('carrito','CartController::index'); //Obtener productos registrados en el carrito por el usuario
+$routes->get('productos/(:num)','CartController::new');
+$routes->post('carrito','CartController::create'); //Registra un producto en el carrito
 $routes->delete('carrito/(:num)','CartController::delete/$1'); //Eliminar un producto
+
 
 //Rutas historial
 $routes->get('productos','HistoryController::index'); //Obtener lista de productos comprados por el usuario
