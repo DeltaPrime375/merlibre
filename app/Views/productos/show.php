@@ -77,19 +77,10 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                             <input type = "hidden" class = "form-control" name = "id_producto" value="<?php echo "".$producto['id_producto'].""?>"/>
                                             <div>
                                             <div class = "form-group mb-3">
-                                            <input type = "hidden" class = "form-control" name = "fecha_agregado" value="<?php $date = date('m/d/Y h:i:s a', time())?>" />
+                                            <input type = "hidden" class = "form-control" name = "cantidad" value="1"/>
                                             <div>
                                             <div class = "form-group mb-3">
-                                            <input type = "hidden" class = "form-control" name = "cantidad" value=inputQuantity/>
-                                            <div>
-                                            <div class = "form-group mb-3">
-                                            <input type = "hidden" class = "form-control" name = "precio" value="<?php 
-                                                if($producto['descuento']>0){
-                                                    echo "".$producto['precio_producto']."";
-                                                }else
-                                                    echo "".round (trim((($producto['precio_producto'])/100)*(100-($producto['descuento']))), 2)."";
-                                                ?>
-                                            ?>"/>
+                                            <input type = "hidden" class = "form-control" name = "precio" value="<?php echo "".$producto['precio_producto'].""?>"/>
                                             <div>
                                             <div class = "form-group mb-3">
                                             <input type = "hidden" class = "form-control" name = "descuento" value="<?php echo "".$producto['descuento'].""?>"/>
@@ -98,7 +89,14 @@ $this->section('title')?> Detalles del producto <?= $this->endSection()?>
                                             <input type = "hidden" class = "form-control" name = "tiempo_surtido" value="<?php echo "".$producto['tiempo_surtido'].""?>" />
                                             <div>
                                             
-                                            
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "id_usuario" value="<?php echo "".$_SESSION['Usuario'].""?>"/>
+                                            <div>
+                                            <div class = "form-group mb-3">
+                                            <input type = "hidden" class = "form-control" name = "cantidad_productos" value="1"/>
+                                            <div>
+                                            <input type = "hidden" class = "form-control" name = "importe_carrito" value="<?php echo "".$producto['precio_producto'].""?>"/>
+                                            <div>
                                             <button type = "submit" class = "btn btn-secondary bi-cart-fill me-1">Agregar al carrito</button>
 
                                             </div>
